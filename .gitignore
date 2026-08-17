@@ -1,7 +1,4 @@
-node_modules/
-test-results/
-playwright-report/
-blob-report/
-playwright/.cache/
-*.har
-.env
+echo "node_modules/" >> .gitignore
+echo "playwright-report/" >> .gitignore
+echo "test-results/" >> .gitignore
+echo "*.har" >> .gitignore
