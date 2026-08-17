@@ -1,0 +1,1960 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Crossvalidation.spec.js >> Validación cruzada UI vs API - PlayStation 5, filtro Blanco, menor precio
+- Location: tests\Crossvalidation.spec.js:11:1
+
+# Error details
+
+```
+TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event "response"
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - banner [ref=f11e4]:
+      - navigation "Top navigation bar" [ref=f11e6]:
+        - button "store Elige una tienda" [ref=f11e9] [cursor=pointer]:
+          - generic [ref=f11e10]:
+            - img "store" [ref=f11e11]
+            - generic [ref=f11e13]: Elige una tienda
+        - generic [ref=f11e14]:
+          - generic [ref=f11e15]:
+            - generic [ref=f11e16]:
+              - button "Servicios" [ref=f11e17] [cursor=pointer]:
+                - generic [ref=f11e19]: keyboard_arrow_down
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Viajes y vacaciones":
+                          - /url: /tienda/viajes/cat5280345
+                      - listitem:
+                        - link "Tiempo aire":
+                          - /url: /tienda/checkout/airtimeTicket
+                      - listitem:
+                        - link "Centro de seguros":
+                          - /url: https://miseguro.liverpool.com.mx/?_ga=2.253153356.47703563.1703599799-1800299811.1698851478
+                      - listitem:
+                        - link "Diseño de interiores":
+                          - /url: /tienda/paginas/diseno-interiores
+                      - listitem:
+                        - link "Experiencia en tienda":
+                          - /url: /tienda/paginas/servicios_experiencias
+                      - listitem:
+                        - link "Encuentra tu tienda":
+                          - /url: /tienda/browse/storelocator
+                      - listitem:
+                        - link "Alimentos y bebidas":
+                          - /url: /tienda/paginas/restaurante
+                      - listitem:
+                        - link "Sorteos y concursos":
+                          - /url: https://sorteosyconcursos.liverpool.com.mx/app/inicio
+                      - listitem:
+                        - link "Ventas Corporativas":
+                          - /url: https://www.liverpool.com.mx/tienda/paginas/ventas-corporativas
+            - generic [ref=f11e20]: "|"
+          - generic [ref=f11e21]:
+            - generic [ref=f11e22]:
+              - button "Otros sitios" [ref=f11e23] [cursor=pointer]:
+                - generic [ref=f11e25]: keyboard_arrow_down
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Suburbia":
+                          - /url: https://www.suburbia.com.mx/tienda/home
+                      - listitem:
+                        - link "Banana Republic":
+                          - /url: https://www.bananarepublic.com.mx/tienda/home
+                      - listitem:
+                        - link "Dupuis":
+                          - /url: https://www.dupuis.com.mx/tienda/home
+                      - listitem:
+                        - link "Fabletics":
+                          - /url: https://www.fabletics.mx/
+                      - listitem:
+                        - link "GAP":
+                          - /url: https://www.gap.com.mx/tienda/home
+                      - listitem:
+                        - link "Pottery Barn":
+                          - /url: https://www.potterybarn.com.mx/tienda/home
+                      - listitem:
+                        - link "Pottery Barn Kids":
+                          - /url: https://www.potterybarnkids.com.mx/tienda/home
+                      - listitem:
+                        - link "Toys R Us":
+                          - /url: https://www.toysrus.com.mx/tienda/home
+                      - listitem:
+                        - link "West Elm":
+                          - /url: https://www.westelm.com.mx/tienda/home
+                      - listitem:
+                        - link "Williams Sonoma":
+                          - /url: https://www.williams-sonoma.com.mx/tienda/home
+                      - listitem:
+                        - link "Dockers":
+                          - /url: https://www.dockers.com.mx/tienda/home
+            - generic [ref=f11e26]: "|"
+          - generic [ref=f11e27]:
+            - link "Mesa de regalos" [ref=f11e29] [cursor=pointer]:
+              - /url: https://mesaderegalos.liverpool.com.mx
+            - generic [ref=f11e31]: "|"
+          - link "Mi crédito" [ref=f11e34] [cursor=pointer]:
+            - /url: https://micredito.liverpool.com.mx/?_ga=2.19438584.1315385635.1772751237-1483993055.1770302297
+      - generic [ref=f11e36]:
+        - navigation "Header Navigation Desktop" [ref=f11e37]:
+          - generic [ref=f11e38]:
+            - link [ref=f11e40] [cursor=pointer]:
+              - /url: /tienda/home
+              - img "liverpool-logo-header-mobile" [ref=f11e42]
+            - button "Categorías" [ref=f11e43] [cursor=pointer]:
+              - generic [ref=f11e44]: menu
+          - generic [ref=f11e47]:
+            - textbox "Buscar por producto, categoría y más..." [ref=f11e48]: playstation 5
+            - generic [ref=f11e49]: search
+          - generic [ref=f11e51]:
+            - generic [ref=f11e52]:
+              - button "Iniciar sesión" [ref=f11e53] [cursor=pointer]:
+                - generic [ref=f11e54]:
+                  - generic [ref=f11e55]: Iniciar sesión
+                  - generic: keyboard_arrow_up
+                - generic [ref=f11e56]: account_circle
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - button "Iniciar sesión"
+                        - separator
+                      - listitem:
+                        - link "Mis compras box":
+                          - /url: /tienda/users/miscompras
+                          - generic: Mis compras
+                          - img "box"
+                      - listitem:
+                        - link "Ayuda":
+                          - /url: https://assetspwa.liverpool.com.mx/ayuda/index.html#/
+            - generic [ref=f11e57]:
+              - button "favorites" [ref=f11e58] [cursor=pointer]:
+                - generic [ref=f11e59]: favorite_border
+              - link "shopping cart" [ref=f11e61] [cursor=pointer]:
+                - /url: /tienda/cart
+                - generic [ref=f11e62]: shopping_bag
+        - navigation "Menu mobile" [ref=f11e63]:
+          - generic [ref=f11e66]:
+            - button "Iniciar sesión" [ref=f11e67] [cursor=pointer]:
+              - generic [ref=f11e69]:
+                - generic [ref=f11e70]: account_circle
+                - generic [ref=f11e71]: Iniciar sesión
+            - separator [ref=f11e73]
+            - link "Mis compras box" [ref=f11e74] [cursor=pointer]:
+              - /url: /tienda/users/miscompras
+              - generic [ref=f11e75]: Mis compras
+              - img "box" [ref=f11e76]
+            - link "Mi crédito" [ref=f11e78] [cursor=pointer]:
+              - /url: https://micredito.liverpool.com.mx/?_ga=2.19438584.1315385635.1772751237-1483993055.1770302297
+              - generic [ref=f11e80]: credit_card
+            - link "Mesa de regalos gift" [ref=f11e81] [cursor=pointer]:
+              - /url: https://mesaderegalos.liverpool.com.mx
+              - generic [ref=f11e82]: Mesa de regalos
+              - img "gift" [ref=f11e83]
+            - link "Ayuda" [ref=f11e85] [cursor=pointer]:
+              - /url: https://assetspwa.liverpool.com.mx/ayuda/index.html#/
+              - generic [ref=f11e87]: help_outline
+            - separator [ref=f11e89]
+            - button "Categorías" [ref=f11e90] [cursor=pointer]:
+              - generic [ref=f11e92]: chevron_right
+            - separator [ref=f11e93]
+            - button "Servicios" [ref=f11e94] [cursor=pointer]:
+              - generic [ref=f11e96]: chevron_right
+            - separator [ref=f11e97]
+            - button "Otros sitios" [ref=f11e98] [cursor=pointer]:
+              - generic [ref=f11e100]: chevron_right
+            - separator [ref=f11e101]
+    - main [ref=f11e102]:
+      - generic [ref=f11e104]:
+        - generic [ref=f11e107]:
+          - generic [ref=f11e108]:
+            - button "Categoría" [ref=f11e109] [cursor=pointer]:
+              - generic [ref=f11e111]: keyboard_arrow_up
+            - generic [ref=f11e115]:
+              - generic [ref=f11e117]:
+                - generic [ref=f11e118]: radio_button_checked
+                - generic [ref=f11e119]: Otros departamentos
+              - generic [ref=f11e121]:
+                - button "Videojuegos" [ref=f11e122] [cursor=pointer]
+                - button "Electrónica" [ref=f11e123] [cursor=pointer]
+                - button "Zapatos" [ref=f11e124] [cursor=pointer]
+                - button "Niños y Niñas" [ref=f11e125] [cursor=pointer]
+                - button "Outlet Liverpool" [ref=f11e126] [cursor=pointer]
+                - button "Hombre" [ref=f11e127] [cursor=pointer]
+                - button "Deportes" [ref=f11e128] [cursor=pointer]
+                - button "Juguetes" [ref=f11e129] [cursor=pointer]
+                - button "Ver más" [ref=f11e130] [cursor=pointer]
+          - generic [ref=f11e132]:
+            - button "Descuentos" [ref=f11e133] [cursor=pointer]:
+              - generic [ref=f11e135]: keyboard_arrow_up
+            - group [ref=f11e140]:
+              - radiogroup [ref=f11e141]:
+                - generic [ref=f11e142] [cursor=pointer]:
+                  - radio "80.0 % o más (5)" [ref=f11e144]
+                  - generic [ref=f11e149]:
+                    - text: 80.0 % o más
+                    - generic [ref=f11e150]: (5)
+                - generic [ref=f11e151] [cursor=pointer]:
+                  - radio "70.0 % o más (21)" [ref=f11e153]
+                  - generic [ref=f11e158]:
+                    - text: 70.0 % o más
+                    - generic [ref=f11e159]: (21)
+                - generic [ref=f11e160] [cursor=pointer]:
+                  - radio "60.0 % o más (89)" [ref=f11e162]
+                  - generic [ref=f11e167]:
+                    - text: 60.0 % o más
+                    - generic [ref=f11e168]: (89)
+                - generic [ref=f11e169] [cursor=pointer]:
+                  - radio "50.0 % o más (180)" [ref=f11e171]
+                  - generic [ref=f11e176]:
+                    - text: 50.0 % o más
+                    - generic [ref=f11e177]: (180)
+                - generic [ref=f11e178] [cursor=pointer]:
+                  - radio "40.0 % o más (285)" [ref=f11e180]
+                  - generic [ref=f11e185]:
+                    - text: 40.0 % o más
+                    - generic [ref=f11e186]: (285)
+                - generic [ref=f11e187] [cursor=pointer]:
+                  - radio "30.0 % o más (472)" [ref=f11e189]
+                  - generic [ref=f11e194]:
+                    - text: 30.0 % o más
+                    - generic [ref=f11e195]: (472)
+                - generic [ref=f11e196] [cursor=pointer]:
+                  - radio "20.0 % o más (763)" [ref=f11e198]
+                  - generic [ref=f11e203]:
+                    - text: 20.0 % o más
+                    - generic [ref=f11e204]: (763)
+                - generic [ref=f11e205] [cursor=pointer]:
+                  - radio "10.0 % o más (913)" [ref=f11e207]
+                  - generic [ref=f11e212]:
+                    - text: 10.0 % o más
+                    - generic [ref=f11e213]: (913)
+          - generic [ref=f11e214]:
+            - button "Talla" [ref=f11e215] [cursor=pointer]:
+              - generic [ref=f11e217]: keyboard_arrow_up
+            - group [ref=f11e222]:
+              - generic [ref=f11e223]:
+                - generic [ref=f11e224] [cursor=pointer]:
+                  - checkbox "X-Chico (1)" [ref=f11e226]
+                  - generic [ref=f11e230]:
+                    - generic [ref=f11e231]: X-Chico
+                    - generic [ref=f11e232]: (1)
+                - generic [ref=f11e233] [cursor=pointer]:
+                  - checkbox "Chico (8)" [ref=f11e235]
+                  - generic [ref=f11e239]:
+                    - generic [ref=f11e240]: Chico
+                    - generic [ref=f11e241]: (8)
+                - generic [ref=f11e242] [cursor=pointer]:
+                  - checkbox "Mediano (8)" [ref=f11e244]
+                  - generic [ref=f11e248]:
+                    - generic [ref=f11e249]: Mediano
+                    - generic [ref=f11e250]: (8)
+                - generic [ref=f11e251] [cursor=pointer]:
+                  - checkbox "Grande (3)" [ref=f11e253]
+                  - generic [ref=f11e257]:
+                    - generic [ref=f11e258]: Grande
+                    - generic [ref=f11e259]: (3)
+                - generic [ref=f11e260] [cursor=pointer]:
+                  - checkbox "3 Años (1)" [ref=f11e262]
+                  - generic [ref=f11e266]:
+                    - generic [ref=f11e267]: 3 Años
+                    - generic [ref=f11e268]: (1)
+                - generic [ref=f11e269] [cursor=pointer]:
+                  - checkbox "4 Años (1)" [ref=f11e271]
+                  - generic [ref=f11e275]:
+                    - generic [ref=f11e276]: 4 Años
+                    - generic [ref=f11e277]: (1)
+                - generic [ref=f11e278] [cursor=pointer]:
+                  - checkbox "7 Años (1)" [ref=f11e280]
+                  - generic [ref=f11e284]:
+                    - generic [ref=f11e285]: 7 Años
+                    - generic [ref=f11e286]: (1)
+                - generic [ref=f11e287] [cursor=pointer]:
+                  - checkbox "8 Años (1)" [ref=f11e289]
+                  - generic [ref=f11e293]:
+                    - generic [ref=f11e294]: 8 Años
+                    - generic [ref=f11e295]: (1)
+              - button "Ver más" [ref=f11e296] [cursor=pointer]
+          - generic [ref=f11e298]:
+            - button "Marcas" [ref=f11e299] [cursor=pointer]:
+              - generic [ref=f11e301]: keyboard_arrow_up
+            - generic [ref=f11e302]:
+              - generic [ref=f11e304]:
+                - textbox "Buscar marca" [ref=f11e305]
+                - generic [ref=f11e306]: search
+              - group [ref=f11e311]:
+                - generic [ref=f11e312]:
+                  - generic [ref=f11e313] [cursor=pointer]:
+                    - checkbox "4GAMERS (3)" [ref=f11e315]
+                    - generic [ref=f11e319]:
+                      - generic [ref=f11e320]: 4GAMERS
+                      - generic [ref=f11e321]: (3)
+                  - generic [ref=f11e322] [cursor=pointer]:
+                    - checkbox "505 GAMES (1)" [ref=f11e324]
+                    - generic [ref=f11e328]:
+                      - generic [ref=f11e329]: 505 GAMES
+                      - generic [ref=f11e330]: (1)
+                  - generic [ref=f11e331] [cursor=pointer]:
+                    - checkbox "ABS (1)" [ref=f11e333]
+                    - generic [ref=f11e337]:
+                      - generic [ref=f11e338]: ABS
+                      - generic [ref=f11e339]: (1)
+                  - generic [ref=f11e340] [cursor=pointer]:
+                    - checkbox "ACTIVISION (4)" [ref=f11e342]
+                    - generic [ref=f11e346]:
+                      - generic [ref=f11e347]: ACTIVISION
+                      - generic [ref=f11e348]: (4)
+                  - generic [ref=f11e349] [cursor=pointer]:
+                    - checkbox "ADATA (2)" [ref=f11e351]
+                    - generic [ref=f11e355]:
+                      - generic [ref=f11e356]: ADATA
+                      - generic [ref=f11e357]: (2)
+                  - generic [ref=f11e358] [cursor=pointer]:
+                    - checkbox "ALOMIA (2)" [ref=f11e360]
+                    - generic [ref=f11e364]:
+                      - generic [ref=f11e365]: ALOMIA
+                      - generic [ref=f11e366]: (2)
+                  - generic [ref=f11e367] [cursor=pointer]:
+                    - checkbox "ARC SYSTEM WORKS (1)" [ref=f11e369]
+                    - generic [ref=f11e373]:
+                      - generic [ref=f11e374]: ARC SYSTEM WORKS
+                      - generic [ref=f11e375]: (1)
+                  - generic [ref=f11e376] [cursor=pointer]:
+                    - checkbox "ASICS (6)" [ref=f11e378]
+                    - generic [ref=f11e382]:
+                      - generic [ref=f11e383]: ASICS
+                      - generic [ref=f11e384]: (6)
+                - button "Ver más" [ref=f11e385] [cursor=pointer]
+          - generic [ref=f11e387]:
+            - button "Tamaño" [ref=f11e388] [cursor=pointer]:
+              - generic [ref=f11e390]: keyboard_arrow_up
+            - group [ref=f11e395]:
+              - generic [ref=f11e396]:
+                - generic [ref=f11e397] [cursor=pointer]:
+                  - checkbox "Individual (2)" [ref=f11e399]
+                  - generic [ref=f11e403]:
+                    - generic [ref=f11e404]: Individual
+                    - generic [ref=f11e405]: (2)
+                - generic [ref=f11e406] [cursor=pointer]:
+                  - checkbox "Matrimonial (2)" [ref=f11e408]
+                  - generic [ref=f11e412]:
+                    - generic [ref=f11e413]: Matrimonial
+                    - generic [ref=f11e414]: (2)
+          - generic [ref=f11e415]:
+            - button "Color" [ref=f11e416] [cursor=pointer]:
+              - generic [ref=f11e418]: keyboard_arrow_up
+            - group [ref=f11e423]:
+              - generic [ref=f11e424]:
+                - generic [ref=f11e425] [cursor=pointer]:
+                  - checkbox "Multicolor (209)" [ref=f11e427]
+                  - generic [ref=f11e431]:
+                    - text: Multicolor
+                    - generic [ref=f11e434]: (209)
+                - generic [ref=f11e435] [cursor=pointer]:
+                  - checkbox "Blanco (144)" [ref=f11e437]
+                  - generic [ref=f11e441]:
+                    - text: Blanco
+                    - generic [ref=f11e444]: (144)
+                - generic [ref=f11e445] [cursor=pointer]:
+                  - checkbox "Negro (136)" [ref=f11e447]
+                  - generic [ref=f11e451]:
+                    - text: Negro
+                    - generic [ref=f11e454]: (136)
+                - generic [ref=f11e455] [cursor=pointer]:
+                  - checkbox "Azul Claro (58)" [ref=f11e457]
+                  - generic [ref=f11e461]:
+                    - text: Azul Claro
+                    - generic [ref=f11e464]: (58)
+                - generic [ref=f11e465] [cursor=pointer]:
+                  - checkbox "Rojo (29)" [ref=f11e467]
+                  - generic [ref=f11e471]:
+                    - text: Rojo
+                    - generic [ref=f11e474]: (29)
+                - generic [ref=f11e475] [cursor=pointer]:
+                  - checkbox "Gris Claro (21)" [ref=f11e477]
+                  - generic [ref=f11e481]:
+                    - text: Gris Claro
+                    - generic [ref=f11e484]: (21)
+                - generic [ref=f11e485] [cursor=pointer]:
+                  - checkbox "Azul Oscuro (19)" [ref=f11e487]
+                  - generic [ref=f11e491]:
+                    - text: Azul Oscuro
+                    - generic [ref=f11e494]: (19)
+                - generic [ref=f11e495] [cursor=pointer]:
+                  - checkbox "Rosa Claro (11)" [ref=f11e497]
+                  - generic [ref=f11e501]:
+                    - text: Rosa Claro
+                    - generic [ref=f11e504]: (11)
+              - button "Ver más" [ref=f11e505] [cursor=pointer]
+          - generic [ref=f11e507]:
+            - button "Precios" [ref=f11e508] [cursor=pointer]:
+              - generic [ref=f11e510]: keyboard_arrow_up
+            - generic [ref=f11e511]:
+              - generic [ref=f11e512]:
+                - spinbutton "Mínimo ($)" [ref=f11e514]
+                - generic [ref=f11e515]: remove
+                - spinbutton "Máximo ($$)" [ref=f11e517]
+                - button "Filtrar" [ref=f11e518] [cursor=pointer]:
+                  - generic [ref=f11e519]: chevron_right
+              - group [ref=f11e524]:
+                - radiogroup [ref=f11e525]:
+                  - generic [ref=f11e526] [cursor=pointer]:
+                    - radio "Menos de $500.0 (99)" [ref=f11e528]
+                    - generic [ref=f11e533]:
+                      - generic [ref=f11e534]: Menos de $500.0
+                      - generic [ref=f11e535]: (99)
+                  - generic [ref=f11e536] [cursor=pointer]:
+                    - radio "$500.0 -$1000.0 (571)" [ref=f11e538]
+                    - generic [ref=f11e543]:
+                      - generic [ref=f11e544]: $500.0 -$1000.0
+                      - generic [ref=f11e545]: (571)
+                  - generic [ref=f11e546] [cursor=pointer]:
+                    - radio "$1000.0 -$2000.0 (516)" [ref=f11e548]
+                    - generic [ref=f11e553]:
+                      - generic [ref=f11e554]: $1000.0 -$2000.0
+                      - generic [ref=f11e555]: (516)
+                  - generic [ref=f11e556] [cursor=pointer]:
+                    - radio "$2000.0 -$5000.0 (278)" [ref=f11e558]
+                    - generic [ref=f11e563]:
+                      - generic [ref=f11e564]: $2000.0 -$5000.0
+                      - generic [ref=f11e565]: (278)
+                  - generic [ref=f11e566] [cursor=pointer]:
+                    - radio "$5000.0 -$10000.0 (52)" [ref=f11e568]
+                    - generic [ref=f11e573]:
+                      - generic [ref=f11e574]: $5000.0 -$10000.0
+                      - generic [ref=f11e575]: (52)
+                  - generic [ref=f11e576] [cursor=pointer]:
+                    - radio "Mas de $10000.0 (24)" [ref=f11e578]
+                    - generic [ref=f11e583]:
+                      - generic [ref=f11e584]: Mas de $10000.0
+                      - generic [ref=f11e585]: (24)
+          - generic [ref=f11e586]:
+            - button "Calificación" [ref=f11e587] [cursor=pointer]:
+              - generic [ref=f11e589]: keyboard_arrow_up
+            - group [ref=f11e594]:
+              - radiogroup [ref=f11e595]:
+                - generic [ref=f11e596] [cursor=pointer]:
+                  - radio "1.5 stars of 5 2 estrellas o más (70)" [ref=f11e598]
+                  - generic [ref=f11e604]:
+                    - img "1.5 stars of 5" [ref=f11e605]:
+                      - img "star_full" [ref=f11e606]
+                      - img "star_half" [ref=f11e608]
+                      - img "star_empty" [ref=f11e610]
+                      - img "star_empty" [ref=f11e612]
+                      - img "star_empty" [ref=f11e614]
+                    - generic [ref=f11e616]: 2 estrellas o más
+                    - generic [ref=f11e617]: (70)
+                - generic [ref=f11e618] [cursor=pointer]:
+                  - radio "2.5 stars of 5 3 estrellas o más (66)" [ref=f11e620]
+                  - generic [ref=f11e626]:
+                    - img "2.5 stars of 5" [ref=f11e627]:
+                      - img "star_full" [ref=f11e628]
+                      - img "star_full" [ref=f11e630]
+                      - img "star_half" [ref=f11e632]
+                      - img "star_empty" [ref=f11e634]
+                      - img "star_empty" [ref=f11e636]
+                    - generic [ref=f11e638]: 3 estrellas o más
+                    - generic [ref=f11e639]: (66)
+                - generic [ref=f11e640] [cursor=pointer]:
+                  - radio "3.5 stars of 5 4 estrellas o más (48)" [ref=f11e642]
+                  - generic [ref=f11e648]:
+                    - img "3.5 stars of 5" [ref=f11e649]:
+                      - img "star_full" [ref=f11e650]
+                      - img "star_full" [ref=f11e652]
+                      - img "star_full" [ref=f11e654]
+                      - img "star_half" [ref=f11e656]
+                      - img "star_empty" [ref=f11e658]
+                    - generic [ref=f11e660]: 4 estrellas o más
+                    - generic [ref=f11e661]: (48)
+          - generic [ref=f11e662]:
+            - button "Vendido por" [ref=f11e663] [cursor=pointer]:
+              - generic [ref=f11e665]: keyboard_arrow_up
+            - group [ref=f11e670]:
+              - generic [ref=f11e671]:
+                - generic [ref=f11e672] [cursor=pointer]:
+                  - checkbox "liverpool (326)" [ref=f11e674]
+                  - generic [ref=f11e678]:
+                    - generic [ref=f11e679]: liverpool
+                    - generic [ref=f11e680]: (326)
+                - generic [ref=f11e681] [cursor=pointer]:
+                  - checkbox "MandaLibre (392)" [ref=f11e683]
+                  - generic [ref=f11e687]:
+                    - generic [ref=f11e688]: MandaLibre
+                    - generic [ref=f11e689]: (392)
+                - generic [ref=f11e690] [cursor=pointer]:
+                  - checkbox "PROMO GAMES (256)" [ref=f11e692]
+                  - generic [ref=f11e696]:
+                    - generic [ref=f11e697]: PROMO GAMES
+                    - generic [ref=f11e698]: (256)
+                - generic [ref=f11e699] [cursor=pointer]:
+                  - checkbox "toysrus (205)" [ref=f11e701]
+                  - generic [ref=f11e705]:
+                    - generic [ref=f11e706]: toysrus
+                    - generic [ref=f11e707]: (205)
+                - generic [ref=f11e708] [cursor=pointer]:
+                  - checkbox "Galeria Snack (185)" [ref=f11e710]
+                  - generic [ref=f11e714]:
+                    - generic [ref=f11e715]: Galeria Snack
+                    - generic [ref=f11e716]: (185)
+                - generic [ref=f11e717] [cursor=pointer]:
+                  - checkbox "BIU Supply (122)" [ref=f11e719]
+                  - generic [ref=f11e723]:
+                    - generic [ref=f11e724]: BIU Supply
+                    - generic [ref=f11e725]: (122)
+                - generic [ref=f11e726] [cursor=pointer]:
+                  - checkbox "commerweb (97)" [ref=f11e728]
+                  - generic [ref=f11e732]:
+                    - generic [ref=f11e733]: commerweb
+                    - generic [ref=f11e734]: (97)
+                - generic [ref=f11e735] [cursor=pointer]:
+                  - checkbox "RANOR INFINITY SA DE CV (95)" [ref=f11e737]
+                  - generic [ref=f11e741]:
+                    - generic [ref=f11e742]: RANOR INFINITY SA DE CV
+                    - generic [ref=f11e743]: (95)
+              - button "Ver más" [ref=f11e744] [cursor=pointer]
+          - generic [ref=f11e746]:
+            - button "Tipo de producto" [ref=f11e747] [cursor=pointer]:
+              - generic [ref=f11e749]: keyboard_arrow_up
+            - group [ref=f11e754]:
+              - generic [ref=f11e755]:
+                - generic [ref=f11e756] [cursor=pointer]:
+                  - checkbox "Juegos de Consola (1034)" [ref=f11e758]
+                  - generic [ref=f11e762]:
+                    - generic [ref=f11e763]: Juegos de Consola
+                    - generic [ref=f11e764]: (1034)
+                - generic [ref=f11e765] [cursor=pointer]:
+                  - checkbox "Videojuegos (1034)" [ref=f11e767]
+                  - generic [ref=f11e771]:
+                    - generic [ref=f11e772]: Videojuegos
+                    - generic [ref=f11e773]: (1034)
+                - generic [ref=f11e774] [cursor=pointer]:
+                  - checkbox "Controles para Consola (96)" [ref=f11e776]
+                  - generic [ref=f11e780]:
+                    - generic [ref=f11e781]: Controles para Consola
+                    - generic [ref=f11e782]: (96)
+                - generic [ref=f11e783] [cursor=pointer]:
+                  - checkbox "Tenis Deportivos (88)" [ref=f11e785]
+                  - generic [ref=f11e789]:
+                    - generic [ref=f11e790]: Tenis Deportivos
+                    - generic [ref=f11e791]: (88)
+                - generic [ref=f11e792] [cursor=pointer]:
+                  - checkbox "Tenis (53)" [ref=f11e794]
+                  - generic [ref=f11e798]:
+                    - generic [ref=f11e799]: Tenis
+                    - generic [ref=f11e800]: (53)
+                - generic [ref=f11e801] [cursor=pointer]:
+                  - checkbox "Audífonos (47)" [ref=f11e803]
+                  - generic [ref=f11e807]:
+                    - generic [ref=f11e808]: Audífonos
+                    - generic [ref=f11e809]: (47)
+                - generic [ref=f11e810] [cursor=pointer]:
+                  - checkbox "Audífono over ear (25)" [ref=f11e812]
+                  - generic [ref=f11e816]:
+                    - generic [ref=f11e817]: Audífono over ear
+                    - generic [ref=f11e818]: (25)
+                - generic [ref=f11e819] [cursor=pointer]:
+                  - checkbox "Auriculares (24)" [ref=f11e821]
+                  - generic [ref=f11e825]:
+                    - generic [ref=f11e826]: Auriculares
+                    - generic [ref=f11e827]: (24)
+              - button "Ver más" [ref=f11e828] [cursor=pointer]
+          - generic [ref=f11e830]:
+            - button "Capacidad del disco duro" [ref=f11e831] [cursor=pointer]:
+              - generic [ref=f11e833]: keyboard_arrow_up
+            - group [ref=f11e838]:
+              - generic [ref=f11e839]:
+                - generic [ref=f11e840] [cursor=pointer]:
+                  - checkbox "2 TB (10)" [ref=f11e842]
+                  - generic [ref=f11e846]:
+                    - generic [ref=f11e847]: 2 TB
+                    - generic [ref=f11e848]: (10)
+                - generic [ref=f11e849] [cursor=pointer]:
+                  - checkbox "1 TB (5)" [ref=f11e851]
+                  - generic [ref=f11e855]:
+                    - generic [ref=f11e856]: 1 TB
+                    - generic [ref=f11e857]: (5)
+                - generic [ref=f11e858] [cursor=pointer]:
+                  - checkbox "No tiene (2)" [ref=f11e860]
+                  - generic [ref=f11e864]:
+                    - generic [ref=f11e865]: No tiene
+                    - generic [ref=f11e866]: (2)
+                - generic [ref=f11e867] [cursor=pointer]:
+                  - checkbox "256 GB (1)" [ref=f11e869]
+                  - generic [ref=f11e873]:
+                    - generic [ref=f11e874]: 256 GB
+                    - generic [ref=f11e875]: (1)
+                - generic [ref=f11e876] [cursor=pointer]:
+                  - checkbox "825 GB (1)" [ref=f11e878]
+                  - generic [ref=f11e882]:
+                    - generic [ref=f11e883]: 825 GB
+                    - generic [ref=f11e884]: (1)
+          - generic [ref=f11e885]:
+            - button "Formato" [ref=f11e886] [cursor=pointer]:
+              - generic [ref=f11e888]: keyboard_arrow_up
+            - group [ref=f11e893]:
+              - generic [ref=f11e895] [cursor=pointer]:
+                - checkbox "Físico (4)" [ref=f11e897]
+                - generic [ref=f11e901]:
+                  - generic [ref=f11e902]: Físico
+                  - generic [ref=f11e903]: (4)
+          - generic [ref=f11e904]:
+            - button "Género" [ref=f11e905] [cursor=pointer]:
+              - generic [ref=f11e907]: keyboard_arrow_up
+            - group [ref=f11e912]:
+              - generic [ref=f11e913]:
+                - generic [ref=f11e914] [cursor=pointer]:
+                  - checkbox "Niña (84)" [ref=f11e916]
+                  - generic [ref=f11e920]:
+                    - generic [ref=f11e921]: Niña
+                    - generic [ref=f11e922]: (84)
+                - generic [ref=f11e923] [cursor=pointer]:
+                  - checkbox "Niño (82)" [ref=f11e925]
+                  - generic [ref=f11e929]:
+                    - generic [ref=f11e930]: Niño
+                    - generic [ref=f11e931]: (82)
+                - generic [ref=f11e932] [cursor=pointer]:
+                  - checkbox "Unisex (41)" [ref=f11e934]
+                  - generic [ref=f11e938]:
+                    - generic [ref=f11e939]: Unisex
+                    - generic [ref=f11e940]: (41)
+                - generic [ref=f11e941] [cursor=pointer]:
+                  - checkbox "Hombre (35)" [ref=f11e943]
+                  - generic [ref=f11e947]:
+                    - generic [ref=f11e948]: Hombre
+                    - generic [ref=f11e949]: (35)
+                - generic [ref=f11e950] [cursor=pointer]:
+                  - checkbox "Mujer (5)" [ref=f11e952]
+                  - generic [ref=f11e956]:
+                    - generic [ref=f11e957]: Mujer
+                    - generic [ref=f11e958]: (5)
+          - generic [ref=f11e959]:
+            - button "Número de Entradas HDMI" [ref=f11e960] [cursor=pointer]:
+              - generic [ref=f11e962]: keyboard_arrow_up
+            - group [ref=f11e967]:
+              - generic [ref=f11e968]:
+                - generic [ref=f11e969] [cursor=pointer]:
+                  - checkbox "No tiene (8)" [ref=f11e971]
+                  - generic [ref=f11e975]:
+                    - generic [ref=f11e976]: No tiene
+                    - generic [ref=f11e977]: (8)
+                - generic [ref=f11e978] [cursor=pointer]:
+                  - checkbox "1 (7)" [ref=f11e980]
+                  - generic [ref=f11e984]:
+                    - generic [ref=f11e985]: "1"
+                    - generic [ref=f11e986]: (7)
+                - generic [ref=f11e987] [cursor=pointer]:
+                  - checkbox "2 (3)" [ref=f11e989]
+                  - generic [ref=f11e993]:
+                    - generic [ref=f11e994]: "2"
+                    - generic [ref=f11e995]: (3)
+                - generic [ref=f11e996] [cursor=pointer]:
+                  - checkbox "3 (1)" [ref=f11e998]
+                  - generic [ref=f11e1002]:
+                    - generic [ref=f11e1003]: "3"
+                    - generic [ref=f11e1004]: (1)
+        - generic [ref=f11e1005]:
+          - generic [ref=f11e1006]:
+            - navigation [ref=f11e1008]:
+              - list [ref=f11e1009]:
+                - listitem [ref=f11e1010]:
+                  - link "Home" [ref=f11e1012] [cursor=pointer]:
+                    - /url: /tienda/home
+            - heading "Playstation 5" [level=1] [ref=f11e1018]
+            - generic [ref=f11e1019]:
+              - button "Blanco" [ref=f11e1020] [cursor=pointer]
+              - button "PLAYSTATION 5" [ref=f11e1022] [cursor=pointer]
+              - button "Consolas de Videojuegos" [ref=f11e1024] [cursor=pointer]
+              - button "Juegos de Consola" [ref=f11e1026] [cursor=pointer]
+              - button "Videojuegos" [ref=f11e1028] [cursor=pointer]
+              - button "PLAYSTATION" [ref=f11e1030] [cursor=pointer]
+              - button "1 TB" [ref=f11e1032] [cursor=pointer]
+              - button "825 GB" [ref=f11e1034] [cursor=pointer]
+              - button "SONY" [ref=f11e1036] [cursor=pointer]
+              - button "Negro" [ref=f11e1038] [cursor=pointer]
+              - button "Físico" [ref=f11e1040] [cursor=pointer]
+              - button "2 TB" [ref=f11e1042] [cursor=pointer]
+              - button "NEGRO" [ref=f11e1044] [cursor=pointer]
+              - button "Hombre" [ref=f11e1046] [cursor=pointer]
+          - generic [ref=f11e1048]:
+            - paragraph [ref=f11e1049]: 1526 artículos
+            - button "Ordenar por:" [ref=f11e1051] [cursor=pointer]:
+              - generic [ref=f11e1052]:
+                - generic [ref=f11e1053]: swap_vert
+                - generic [ref=f11e1054]: "Ordenar por:"
+              - generic [ref=f11e1055]: keyboard_arrow_down
+          - generic [ref=f11e1056]:
+            - link "Consola Nintendo Switch 2 de 256 GB edición estándar Consola Nintendo Switch 2 de 256 GB edición estándar Patrocinado NINTENDO Consola Switch 2 de 256 GB edición estándar $10,19925$13,59900 4.5 stars of 5 (45)" [ref=f11e1057] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-nintendo-switch-2-de-256-gb-edicion-estandar/1177646322
+              - generic [ref=f11e1058]:
+                - generic [ref=f11e1061]:
+                  - img "Consola Nintendo Switch 2 de 256 GB edición estándar" [ref=f11e1062]
+                  - img "Consola Nintendo Switch 2 de 256 GB edición estándar" [ref=f11e1063]
+                - generic [ref=f11e1064]:
+                  - generic [ref=f11e1065]: Patrocinado
+                  - heading "NINTENDO" [level=4] [ref=f11e1066]
+                  - heading "Consola Switch 2 de 256 GB edición estándar" [level=3] [ref=f11e1067]
+                  - generic [ref=f11e1069]:
+                    - generic [ref=f11e1070]:
+                      - generic [ref=f11e1071]: $10,199
+                      - generic [ref=f11e1072]: "25"
+                    - generic [ref=f11e1073]:
+                      - generic [ref=f11e1074]: $13,599
+                      - generic [ref=f11e1075]: "00"
+                  - generic [ref=f11e1077]:
+                    - img "4.5 stars of 5" [ref=f11e1078]:
+                      - img "star_full" [ref=f11e1079]
+                      - img "star_full" [ref=f11e1081]
+                      - img "star_full" [ref=f11e1083]
+                      - img "star_full" [ref=f11e1085]
+                      - img "star_half" [ref=f11e1087]
+                    - generic [ref=f11e1089]: (45)
+            - link "Consola fija ps5 de 1 tb Playstation Consola fija ps5 de 1 tb Playstation PLAYSTATION Consola fija ps5 de 1 tb $14,69900 5 stars of 5 (27)" [ref=f11e1090] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-1-tb-playstation/1186785793
+              - generic [ref=f11e1091]:
+                - generic [ref=f11e1094]:
+                  - img "Consola fija ps5 de 1 tb Playstation" [ref=f11e1095]
+                  - img "Consola fija ps5 de 1 tb Playstation" [ref=f11e1096]
+                - generic [ref=f11e1097]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1098]
+                  - heading "Consola fija ps5 de 1 tb" [level=3] [ref=f11e1099]
+                  - generic [ref=f11e1101]:
+                    - generic [ref=f11e1102]: $14,699
+                    - generic [ref=f11e1103]: "00"
+                  - generic [ref=f11e1105]:
+                    - img "5 stars of 5" [ref=f11e1106]:
+                      - img "star_full" [ref=f11e1107]
+                      - img "star_full" [ref=f11e1109]
+                      - img "star_full" [ref=f11e1111]
+                      - img "star_full" [ref=f11e1113]
+                      - img "star_full" [ref=f11e1115]
+                    - generic [ref=f11e1117]: (27)
+            - link "Consola PS5 de 825 GB edición bundle PlayStation Consola PS5 de 825 GB edición bundle PlayStation PLAYSTATION Consola PS5 de 825 GB edición bundle $12,49900 5 stars of 5 (3)" [ref=f11e1118] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-ps5-de-825-gb-edicion-bundle-playstation/1186785807
+              - generic [ref=f11e1119]:
+                - generic [ref=f11e1122]:
+                  - img "Consola PS5 de 825 GB edición bundle PlayStation" [ref=f11e1123]
+                  - img "Consola PS5 de 825 GB edición bundle PlayStation" [ref=f11e1124]
+                - generic [ref=f11e1125]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1126]
+                  - heading "Consola PS5 de 825 GB edición bundle" [level=3] [ref=f11e1127]
+                  - generic [ref=f11e1129]:
+                    - generic [ref=f11e1130]: $12,499
+                    - generic [ref=f11e1131]: "00"
+                  - generic [ref=f11e1133]:
+                    - img "5 stars of 5" [ref=f11e1134]:
+                      - img "star_full" [ref=f11e1135]
+                      - img "star_full" [ref=f11e1137]
+                      - img "star_full" [ref=f11e1139]
+                      - img "star_full" [ref=f11e1141]
+                      - img "star_full" [ref=f11e1143]
+                    - generic [ref=f11e1145]: (3)
+            - link "Consola fija ps5 de 1 tb edición digital Playstation Consola fija ps5 de 1 tb edición digital Playstation PLAYSTATION Consola fija ps5 de 1 tb edición digital $15,99900$17,99900 5 stars of 5 (81)" [ref=f11e1146] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-1-tb-edicion-digital-playstation/1180626294
+              - generic [ref=f11e1147]:
+                - generic [ref=f11e1150]:
+                  - img "Consola fija ps5 de 1 tb edición digital Playstation" [ref=f11e1151]
+                  - img "Consola fija ps5 de 1 tb edición digital Playstation" [ref=f11e1152]
+                - generic [ref=f11e1153]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1154]
+                  - heading "Consola fija ps5 de 1 tb edición digital" [level=3] [ref=f11e1155]
+                  - generic [ref=f11e1157]:
+                    - generic [ref=f11e1158]:
+                      - generic [ref=f11e1159]: $15,999
+                      - generic [ref=f11e1160]: "00"
+                    - generic [ref=f11e1161]:
+                      - generic [ref=f11e1162]: $17,999
+                      - generic [ref=f11e1163]: "00"
+                  - generic [ref=f11e1165]:
+                    - img "5 stars of 5" [ref=f11e1166]:
+                      - img "star_full" [ref=f11e1167]
+                      - img "star_full" [ref=f11e1169]
+                      - img "star_full" [ref=f11e1171]
+                      - img "star_full" [ref=f11e1173]
+                      - img "star_full" [ref=f11e1175]
+                    - generic [ref=f11e1177]: (81)
+            - link "Consola fija ps5 de 1 tb edición limitada Playstation 5 Consola fija ps5 de 1 tb edición limitada Playstation 5 PLAYSTATION 5 Consola fija ps5 de 1 tb edición limitada $19,68900$27,78900" [ref=f11e1178] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-1-tb-edicion-limitada-playstation-5/1191456056
+              - generic [ref=f11e1179]:
+                - generic [ref=f11e1182]:
+                  - img "Consola fija ps5 de 1 tb edición limitada Playstation 5" [ref=f11e1183]
+                  - img "Consola fija ps5 de 1 tb edición limitada Playstation 5" [ref=f11e1184]
+                - generic [ref=f11e1185]:
+                  - heading "PLAYSTATION 5" [level=4] [ref=f11e1186]
+                  - heading "Consola fija ps5 de 1 tb edición limitada" [level=3] [ref=f11e1187]
+                  - generic [ref=f11e1189]:
+                    - generic [ref=f11e1190]:
+                      - generic [ref=f11e1191]: $19,689
+                      - generic [ref=f11e1192]: "00"
+                    - generic [ref=f11e1193]:
+                      - generic [ref=f11e1194]: $27,789
+                      - generic [ref=f11e1195]: "00"
+            - link "Consola PS5 de 2 TB edición digital Consola PS5 de 2 TB edición digital PLAYSTATION Consola PS5 de 2 TB edición digital $20,59900 4.5 stars of 5 (33)" [ref=f11e1196] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-ps5-de-2-tb-edicion-digital/1164967618
+              - generic [ref=f11e1197]:
+                - generic [ref=f11e1200]:
+                  - img "Consola PS5 de 2 TB edición digital" [ref=f11e1201]
+                  - img "Consola PS5 de 2 TB edición digital" [ref=f11e1202]
+                - generic [ref=f11e1203]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1204]
+                  - heading "Consola PS5 de 2 TB edición digital" [level=3] [ref=f11e1205]
+                  - generic [ref=f11e1207]:
+                    - generic [ref=f11e1208]: $20,599
+                    - generic [ref=f11e1209]: "00"
+                  - generic [ref=f11e1211]:
+                    - img "4.5 stars of 5" [ref=f11e1212]:
+                      - img "star_full" [ref=f11e1213]
+                      - img "star_full" [ref=f11e1215]
+                      - img "star_full" [ref=f11e1217]
+                      - img "star_full" [ref=f11e1219]
+                      - img "star_half" [ref=f11e1221]
+                    - generic [ref=f11e1223]: (33)
+            - link "Consola fija ps5 de 1 tb edición estándar Playstation Consola fija ps5 de 1 tb edición estándar Playstation PLAYSTATION Consola fija ps5 de 1 tb edición estándar $17,29900 5 stars of 5 (20)" [ref=f11e1224] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-1-tb-edicion-estandar-playstation/1180626286
+              - generic [ref=f11e1225]:
+                - generic [ref=f11e1228]:
+                  - img "Consola fija ps5 de 1 tb edición estándar Playstation" [ref=f11e1229]
+                  - img "Consola fija ps5 de 1 tb edición estándar Playstation" [ref=f11e1230]
+                - generic [ref=f11e1231]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1232]
+                  - heading "Consola fija ps5 de 1 tb edición estándar" [level=3] [ref=f11e1233]
+                  - generic [ref=f11e1235]:
+                    - generic [ref=f11e1236]: $17,299
+                    - generic [ref=f11e1237]: "00"
+                  - generic [ref=f11e1239]:
+                    - img "5 stars of 5" [ref=f11e1240]:
+                      - img "star_full" [ref=f11e1241]
+                      - img "star_full" [ref=f11e1243]
+                      - img "star_full" [ref=f11e1245]
+                      - img "star_full" [ref=f11e1247]
+                      - img "star_full" [ref=f11e1249]
+                    - generic [ref=f11e1251]: (20)
+            - link "Consola fija PS5 de 2 TB edición bundle Playstation 5 Consola fija PS5 de 2 TB edición bundle Playstation 5 PLAYSTATION 5 Consola fija PS5 de 2 TB edición bundle $30,99900$34,99900" [ref=f11e1252] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-2-tb-edicion-bundle-playstation-5/1199657069
+              - generic [ref=f11e1253]:
+                - generic [ref=f11e1256]:
+                  - img "Consola fija PS5 de 2 TB edición bundle Playstation 5" [ref=f11e1257]
+                  - img "Consola fija PS5 de 2 TB edición bundle Playstation 5" [ref=f11e1258]
+                - generic [ref=f11e1259]:
+                  - heading "PLAYSTATION 5" [level=4] [ref=f11e1260]
+                  - heading "Consola fija PS5 de 2 TB edición bundle" [level=3] [ref=f11e1261]
+                  - generic [ref=f11e1263]:
+                    - generic [ref=f11e1264]:
+                      - generic [ref=f11e1265]: $30,999
+                      - generic [ref=f11e1266]: "00"
+                    - generic [ref=f11e1267]:
+                      - generic [ref=f11e1268]: $34,999
+                      - generic [ref=f11e1269]: "00"
+            - link "Portal Remote Player PS5 Portal Remote Player PS5 PLAYSTATION Portal Remote Player PS5 $5,99900 4.5 stars of 5 (46)" [ref=f11e1270] [cursor=pointer]:
+              - /url: /tienda/pdp/portal-remote-player-ps5/1156059630
+              - generic [ref=f11e1271]:
+                - generic [ref=f11e1274]:
+                  - img "Portal Remote Player PS5" [ref=f11e1275]
+                  - img "Portal Remote Player PS5" [ref=f11e1276]
+                - generic [ref=f11e1277]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1278]
+                  - heading "Portal Remote Player PS5" [level=3] [ref=f11e1279]
+                  - generic [ref=f11e1281]:
+                    - generic [ref=f11e1282]: $5,999
+                    - generic [ref=f11e1283]: "00"
+                  - generic [ref=f11e1285]:
+                    - img "4.5 stars of 5" [ref=f11e1286]:
+                      - img "star_full" [ref=f11e1287]
+                      - img "star_full" [ref=f11e1289]
+                      - img "star_full" [ref=f11e1291]
+                      - img "star_full" [ref=f11e1293]
+                      - img "star_half" [ref=f11e1295]
+                    - generic [ref=f11e1297]: (46)
+            - link "Spider-Man 2 Playstation bundle para PS5 Spider-Man 2 Playstation bundle para PS5 PLAYSTATION Spider-Man 2 bundle para PS5 $1,04900$1,49900" [ref=f11e1298] [cursor=pointer]:
+              - /url: /tienda/pdp/spider-man-2-playstation-bundle-para-ps5/1186260666
+              - generic [ref=f11e1299]:
+                - generic [ref=f11e1302]:
+                  - img "Spider-Man 2 Playstation bundle para PS5" [ref=f11e1303]
+                  - img "Spider-Man 2 Playstation bundle para PS5" [ref=f11e1304]
+                - generic [ref=f11e1305]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1306]
+                  - heading "Spider-Man 2 bundle para PS5" [level=3] [ref=f11e1307]
+                  - generic [ref=f11e1309]:
+                    - generic [ref=f11e1310]:
+                      - generic [ref=f11e1311]: $1,049
+                      - generic [ref=f11e1312]: "00"
+                    - generic [ref=f11e1313]:
+                      - generic [ref=f11e1314]: $1,499
+                      - generic [ref=f11e1315]: "00"
+            - link "Consola fija ps5 de 2 tb Sonny Consola fija ps5 de 2 tb Sonny SONNY Consola fija ps5 de 2 tb $24,99900$39,99900" [ref=f11e1316] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-2-tb-sonny/1170398382
+              - generic [ref=f11e1317]:
+                - generic [ref=f11e1320]:
+                  - img "Consola fija ps5 de 2 tb Sonny" [ref=f11e1321]
+                  - img "Consola fija ps5 de 2 tb Sonny" [ref=f11e1322]
+                - generic [ref=f11e1323]:
+                  - heading "SONNY" [level=4] [ref=f11e1324]
+                  - heading "Consola fija ps5 de 2 tb" [level=3] [ref=f11e1325]
+                  - generic [ref=f11e1327]:
+                    - generic [ref=f11e1328]:
+                      - generic [ref=f11e1329]: $24,999
+                      - generic [ref=f11e1330]: "00"
+                    - generic [ref=f11e1331]:
+                      - generic [ref=f11e1332]: $39,999
+                      - generic [ref=f11e1333]: "00"
+            - link "Grand Theft Auto VI Playstation estandar para PS5 Grand Theft Auto VI Playstation estandar para PS5 PLAYSTATION Grand Theft Auto VI estandar para PS5 $1,69900 Preventa" [ref=f11e1334] [cursor=pointer]:
+              - /url: /tienda/pdp/grand-theft-auto-vi-playstation-estandar-para-ps5/1202886040
+              - generic [ref=f11e1335]:
+                - generic [ref=f11e1338]:
+                  - img "Grand Theft Auto VI Playstation estandar para PS5" [ref=f11e1339]
+                  - img "Grand Theft Auto VI Playstation estandar para PS5" [ref=f11e1340]
+                - generic [ref=f11e1341]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1342]
+                  - heading "Grand Theft Auto VI estandar para PS5" [level=3] [ref=f11e1343]
+                  - generic [ref=f11e1345]:
+                    - generic [ref=f11e1346]: $1,699
+                    - generic [ref=f11e1347]: "00"
+                  - generic [ref=f11e1348]: Preventa
+            - link "EA Sports FC 26 Playstation estándar para PS5 EA Sports FC 26 Playstation estándar para PS5 PLAYSTATION EA Sports FC 26 estándar para PS5 $99900 4.5 stars of 5 (40)" [ref=f11e1352] [cursor=pointer]:
+              - /url: /tienda/pdp/ea-sports-fc-26-playstation-estandar-para-ps5/1183456926
+              - generic [ref=f11e1353]:
+                - generic [ref=f11e1356]:
+                  - img "EA Sports FC 26 Playstation estándar para PS5" [ref=f11e1357]
+                  - img "EA Sports FC 26 Playstation estándar para PS5" [ref=f11e1358]
+                - generic [ref=f11e1359]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1360]
+                  - heading "EA Sports FC 26 estándar para PS5" [level=3] [ref=f11e1361]
+                  - generic [ref=f11e1363]:
+                    - generic [ref=f11e1364]: $999
+                    - generic [ref=f11e1365]: "00"
+                  - generic [ref=f11e1367]:
+                    - img "4.5 stars of 5" [ref=f11e1368]:
+                      - img "star_full" [ref=f11e1369]
+                      - img "star_full" [ref=f11e1371]
+                      - img "star_full" [ref=f11e1373]
+                      - img "star_full" [ref=f11e1375]
+                      - img "star_half" [ref=f11e1377]
+                    - generic [ref=f11e1379]: (40)
+            - link "Consola fija PS5 de 2 TB edición bundle Nintendo Consola fija PS5 de 2 TB edición bundle Nintendo NINTENDO Consola fija PS5 de 2 TB edición bundle $30,99900" [ref=f11e1380] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-2-tb-edicion-bundle-nintendo/1199658189
+              - generic [ref=f11e1381]:
+                - generic [ref=f11e1384]:
+                  - img "Consola fija PS5 de 2 TB edición bundle Nintendo" [ref=f11e1385]
+                  - img "Consola fija PS5 de 2 TB edición bundle Nintendo" [ref=f11e1386]
+                - generic [ref=f11e1387]:
+                  - heading "NINTENDO" [level=4] [ref=f11e1388]
+                  - heading "Consola fija PS5 de 2 TB edición bundle" [level=3] [ref=f11e1389]
+                  - generic [ref=f11e1391]:
+                    - generic [ref=f11e1392]: $30,999
+                    - generic [ref=f11e1393]: "00"
+            - link "Lego Horizon Adventures Playstation estándar para PS5 Lego Horizon Adventures Playstation estándar para PS5 PLAYSTATION Lego Horizon Adventures estándar para PS5 $35950$71900 5 stars of 5 (1)" [ref=f11e1394] [cursor=pointer]:
+              - /url: /tienda/pdp/lego-horizon-adventures-playstation-estandar-para-ps5/1165587410
+              - generic [ref=f11e1395]:
+                - generic [ref=f11e1398]:
+                  - img "Lego Horizon Adventures Playstation estándar para PS5" [ref=f11e1399]
+                  - img "Lego Horizon Adventures Playstation estándar para PS5" [ref=f11e1400]
+                - generic [ref=f11e1401]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1402]
+                  - heading "Lego Horizon Adventures estándar para PS5" [level=3] [ref=f11e1403]
+                  - generic [ref=f11e1405]:
+                    - generic [ref=f11e1406]:
+                      - generic [ref=f11e1407]: $359
+                      - generic [ref=f11e1408]: "50"
+                    - generic [ref=f11e1409]:
+                      - generic [ref=f11e1410]: $719
+                      - generic [ref=f11e1411]: "00"
+                  - generic [ref=f11e1413]:
+                    - img "5 stars of 5" [ref=f11e1414]:
+                      - img "star_full" [ref=f11e1415]
+                      - img "star_full" [ref=f11e1417]
+                      - img "star_full" [ref=f11e1419]
+                      - img "star_full" [ref=f11e1421]
+                      - img "star_full" [ref=f11e1423]
+                    - generic [ref=f11e1425]: (1)
+            - link "Grand Theft Auto V Playstation estándar para PS5 Grand Theft Auto V Playstation estándar para PS5 PS5 Grand Theft Auto V estándar para PS5 $64899$2,38600 4.5 stars of 5 (55)" [ref=f11e1426] [cursor=pointer]:
+              - /url: /tienda/pdp/grand-theft-auto-v-playstation-estandar-para-ps5/1118872246
+              - generic [ref=f11e1427]:
+                - generic [ref=f11e1430]:
+                  - img "Grand Theft Auto V Playstation estándar para PS5" [ref=f11e1431]
+                  - img "Grand Theft Auto V Playstation estándar para PS5" [ref=f11e1432]
+                - generic [ref=f11e1433]:
+                  - heading "PS5" [level=4] [ref=f11e1434]
+                  - heading "Grand Theft Auto V estándar para PS5" [level=3] [ref=f11e1435]
+                  - generic [ref=f11e1437]:
+                    - generic [ref=f11e1438]:
+                      - generic [ref=f11e1439]: $648
+                      - generic [ref=f11e1440]: "99"
+                    - generic [ref=f11e1441]:
+                      - generic [ref=f11e1442]: $2,386
+                      - generic [ref=f11e1443]: "00"
+                  - generic [ref=f11e1445]:
+                    - img "4.5 stars of 5" [ref=f11e1446]:
+                      - img "star_full" [ref=f11e1447]
+                      - img "star_full" [ref=f11e1449]
+                      - img "star_full" [ref=f11e1451]
+                      - img "star_full" [ref=f11e1453]
+                      - img "star_half" [ref=f11e1455]
+                    - generic [ref=f11e1457]: (55)
+            - link "Cargador de control PS Trust USB tipo C Cargador de control PS Trust USB tipo C TRUST Cargador de control PS USB tipo C $31429$44900" [ref=f11e1458] [cursor=pointer]:
+              - /url: /tienda/pdp/cargador-de-control-ps-trust-usb-tipo-c/1143667819
+              - generic [ref=f11e1459]:
+                - generic [ref=f11e1462]:
+                  - img "Cargador de control PS Trust USB tipo C" [ref=f11e1463]
+                  - img "Cargador de control PS Trust USB tipo C" [ref=f11e1464]
+                - generic [ref=f11e1465]:
+                  - heading "TRUST" [level=4] [ref=f11e1466]
+                  - heading "Cargador de control PS USB tipo C" [level=3] [ref=f11e1467]
+                  - generic [ref=f11e1469]:
+                    - generic [ref=f11e1470]:
+                      - generic [ref=f11e1471]: $314
+                      - generic [ref=f11e1472]: "29"
+                    - generic [ref=f11e1473]:
+                      - generic [ref=f11e1474]: $449
+                      - generic [ref=f11e1475]: "00"
+            - link "Consola fija PS5 de 2 TB edición bundle Playstation Consola fija PS5 de 2 TB edición bundle Playstation PLAYSTATION Consola fija PS5 de 2 TB edición bundle $24,99900$25,99900" [ref=f11e1476] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-2-tb-edicion-bundle-playstation/1199038008
+              - generic [ref=f11e1477]:
+                - generic [ref=f11e1480]:
+                  - img "Consola fija PS5 de 2 TB edición bundle Playstation" [ref=f11e1481]
+                  - img "Consola fija PS5 de 2 TB edición bundle Playstation" [ref=f11e1482]
+                - generic [ref=f11e1483]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1484]
+                  - heading "Consola fija PS5 de 2 TB edición bundle" [level=3] [ref=f11e1485]
+                  - generic [ref=f11e1487]:
+                    - generic [ref=f11e1488]:
+                      - generic [ref=f11e1489]: $24,999
+                      - generic [ref=f11e1490]: "00"
+                    - generic [ref=f11e1491]:
+                      - generic [ref=f11e1492]: $25,999
+                      - generic [ref=f11e1493]: "00"
+            - link "Consola fija ps5 de 1 tb edición limitada Consola fija ps5 de 1 tb edición limitada PLAYSTATION Consola fija ps5 de 1 tb edición limitada $19,99900$28,99900" [ref=f11e1494] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-1-tb-edicion-limitada/999684097840
+              - generic [ref=f11e1495]:
+                - generic [ref=f11e1498]:
+                  - img "Consola fija ps5 de 1 tb edición limitada" [ref=f11e1499]
+                  - img "Consola fija ps5 de 1 tb edición limitada" [ref=f11e1500]
+                - generic [ref=f11e1501]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1502]
+                  - heading "Consola fija ps5 de 1 tb edición limitada" [level=3] [ref=f11e1503]
+                  - generic [ref=f11e1505]:
+                    - generic [ref=f11e1506]:
+                      - generic [ref=f11e1507]: $19,999
+                      - generic [ref=f11e1508]: "00"
+                    - generic [ref=f11e1509]:
+                      - generic [ref=f11e1510]: $28,999
+                      - generic [ref=f11e1511]: "00"
+            - link "Consola fija ps5 de 2 tb edición bundle Playstation Consola fija ps5 de 2 tb edición bundle Playstation PLAYSTATION Consola fija ps5 de 2 tb edición bundle $29,98900$29,99900" [ref=f11e1512] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-2-tb-edicion-bundle-playstation/1199076678
+              - generic [ref=f11e1513]:
+                - generic [ref=f11e1516]:
+                  - img "Consola fija ps5 de 2 tb edición bundle Playstation" [ref=f11e1517]
+                  - img "Consola fija ps5 de 2 tb edición bundle Playstation" [ref=f11e1518]
+                - generic [ref=f11e1519]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1520]
+                  - heading "Consola fija ps5 de 2 tb edición bundle" [level=3] [ref=f11e1521]
+                  - generic [ref=f11e1523]:
+                    - generic [ref=f11e1524]:
+                      - generic [ref=f11e1525]: $29,989
+                      - generic [ref=f11e1526]: "00"
+                    - generic [ref=f11e1527]:
+                      - generic [ref=f11e1528]: $29,999
+                      - generic [ref=f11e1529]: "00"
+            - link "Control Playstation inalámbrico para playstation 5 Control Playstation inalámbrico para playstation 5 PLAYSTATION Control inalámbrico para 5 $1,49900 4.5 stars of 5 (267)" [ref=f11e1530] [cursor=pointer]:
+              - /url: /tienda/pdp/control-playstation-inalambrico-para-playstation-5/1106500840
+              - generic [ref=f11e1531]:
+                - generic [ref=f11e1534]:
+                  - img "Control Playstation inalámbrico para playstation 5" [ref=f11e1535]
+                  - img "Control Playstation inalámbrico para playstation 5" [ref=f11e1536]
+                - generic [ref=f11e1537]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1538]
+                  - heading "Control inalámbrico para 5" [level=3] [ref=f11e1539]
+                  - generic [ref=f11e1541]:
+                    - generic [ref=f11e1542]: $1,499
+                    - generic [ref=f11e1543]: "00"
+                  - generic [ref=f11e1545]:
+                    - img "4.5 stars of 5" [ref=f11e1546]:
+                      - img "star_full" [ref=f11e1547]
+                      - img "star_full" [ref=f11e1549]
+                      - img "star_full" [ref=f11e1551]
+                      - img "star_full" [ref=f11e1553]
+                      - img "star_half" [ref=f11e1555]
+                    - generic [ref=f11e1557]: (267)
+            - link "Ghost of Yotei Playstation bundle para PS5 Ghost of Yotei Playstation bundle para PS5 PLAYSTATION Ghost of Yotei bundle para PS5 $1,28900$1,69900" [ref=f11e1558] [cursor=pointer]:
+              - /url: /tienda/pdp/ghost-of-yotei-playstation-bundle-para-ps5/1188120161
+              - generic [ref=f11e1559]:
+                - generic [ref=f11e1562]:
+                  - img "Ghost of Yotei Playstation bundle para PS5" [ref=f11e1563]
+                  - img "Ghost of Yotei Playstation bundle para PS5" [ref=f11e1564]
+                - generic [ref=f11e1565]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1566]
+                  - heading "Ghost of Yotei bundle para PS5" [level=3] [ref=f11e1567]
+                  - generic [ref=f11e1569]:
+                    - generic [ref=f11e1570]:
+                      - generic [ref=f11e1571]: $1,289
+                      - generic [ref=f11e1572]: "00"
+                    - generic [ref=f11e1573]:
+                      - generic [ref=f11e1574]: $1,699
+                      - generic [ref=f11e1575]: "00"
+            - link "Consola de 2 tb edición Consola de 2 tb edición PLAYSTATION Consola de 2 tb edición $29,98900$29,99900" [ref=f11e1576] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-de-2-tb-edicion/1199037397
+              - generic [ref=f11e1577]:
+                - generic [ref=f11e1580]:
+                  - img "Consola de 2 tb edición" [ref=f11e1581]
+                  - img "Consola de 2 tb edición" [ref=f11e1582]
+                - generic [ref=f11e1583]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1584]
+                  - heading "Consola de 2 tb edición" [level=3] [ref=f11e1585]
+                  - generic [ref=f11e1587]:
+                    - generic [ref=f11e1588]:
+                      - generic [ref=f11e1589]: $29,989
+                      - generic [ref=f11e1590]: "00"
+                    - generic [ref=f11e1591]:
+                      - generic [ref=f11e1592]: $29,999
+                      - generic [ref=f11e1593]: "00"
+            - link "Marvel's Wolverine Playstation estándar para PS5 Marvel's Wolverine Playstation estándar para PS5 PLAYSTATION Marvel's Wolverine estándar para PS5 $1,49900 Preventa" [ref=f11e1594] [cursor=pointer]:
+              - /url: /tienda/pdp/marvel-s-wolverine-playstation-estandar-para-ps5/1197115421
+              - generic [ref=f11e1595]:
+                - generic [ref=f11e1598]:
+                  - img "Marvel's Wolverine Playstation estándar para PS5" [ref=f11e1599]
+                  - img "Marvel's Wolverine Playstation estándar para PS5" [ref=f11e1600]
+                - generic [ref=f11e1601]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1602]
+                  - heading "Marvel's Wolverine estándar para PS5" [level=3] [ref=f11e1603]
+                  - generic [ref=f11e1605]:
+                    - generic [ref=f11e1606]: $1,499
+                    - generic [ref=f11e1607]: "00"
+                  - generic [ref=f11e1608]: Preventa
+            - link "Grand Theft Auto V Playstation premium para PS4 Grand Theft Auto V Playstation premium para PS4 PS4 Grand Theft Auto V premium para PS4 $53900$1,49900 4.5 stars of 5 (108)" [ref=f11e1612] [cursor=pointer]:
+              - /url: /tienda/pdp/grand-theft-auto-v-playstation-premium-para-ps4/1071162636
+              - generic [ref=f11e1613]:
+                - generic [ref=f11e1616]:
+                  - img "Grand Theft Auto V Playstation premium para PS4" [ref=f11e1617]
+                  - img "Grand Theft Auto V Playstation premium para PS4" [ref=f11e1618]
+                - generic [ref=f11e1619]:
+                  - heading "PS4" [level=4] [ref=f11e1620]
+                  - heading "Grand Theft Auto V premium para PS4" [level=3] [ref=f11e1621]
+                  - generic [ref=f11e1623]:
+                    - generic [ref=f11e1624]:
+                      - generic [ref=f11e1625]: $539
+                      - generic [ref=f11e1626]: "00"
+                    - generic [ref=f11e1627]:
+                      - generic [ref=f11e1628]: $1,499
+                      - generic [ref=f11e1629]: "00"
+                  - generic [ref=f11e1631]:
+                    - img "4.5 stars of 5" [ref=f11e1632]:
+                      - img "star_full" [ref=f11e1633]
+                      - img "star_full" [ref=f11e1635]
+                      - img "star_full" [ref=f11e1637]
+                      - img "star_full" [ref=f11e1639]
+                      - img "star_half" [ref=f11e1641]
+                    - generic [ref=f11e1643]: (108)
+            - link "Ghost Of Yotei Playstation collectors para PS5 Ghost Of Yotei Playstation collectors para PS5 PLAYSTATION Ghost Of Yotei collectors para PS5 $5,49900 4.5 stars of 5 (7)" [ref=f11e1644] [cursor=pointer]:
+              - /url: /tienda/pdp/ghost-of-yotei-playstation-collectors-para-ps5/1178829404
+              - generic [ref=f11e1645]:
+                - generic [ref=f11e1648]:
+                  - img "Ghost Of Yotei Playstation collectors para PS5" [ref=f11e1649]
+                  - img "Ghost Of Yotei Playstation collectors para PS5" [ref=f11e1650]
+                - generic [ref=f11e1651]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1652]
+                  - heading "Ghost Of Yotei collectors para PS5" [level=3] [ref=f11e1653]
+                  - generic [ref=f11e1655]:
+                    - generic [ref=f11e1656]: $5,499
+                    - generic [ref=f11e1657]: "00"
+                  - generic [ref=f11e1659]:
+                    - img "4.5 stars of 5" [ref=f11e1660]:
+                      - img "star_full" [ref=f11e1661]
+                      - img "star_full" [ref=f11e1663]
+                      - img "star_full" [ref=f11e1665]
+                      - img "star_full" [ref=f11e1667]
+                      - img "star_half" [ref=f11e1669]
+                    - generic [ref=f11e1671]: (7)
+            - link "Minecraft Bedrock Playstation estándar para PS5 Minecraft Bedrock Playstation estándar para PS5 PLAYSTATION Minecraft Bedrock estándar para PS5 $79900 4.5 stars of 5 (11)" [ref=f11e1672] [cursor=pointer]:
+              - /url: /tienda/pdp/minecraft-bedrock-playstation-estandar-para-ps5/1164752069
+              - generic [ref=f11e1673]:
+                - generic [ref=f11e1676]:
+                  - img "Minecraft Bedrock Playstation estándar para PS5" [ref=f11e1677]
+                  - img "Minecraft Bedrock Playstation estándar para PS5" [ref=f11e1678]
+                - generic [ref=f11e1679]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1680]
+                  - heading "Minecraft Bedrock estándar para PS5" [level=3] [ref=f11e1681]
+                  - generic [ref=f11e1683]:
+                    - generic [ref=f11e1684]: $799
+                    - generic [ref=f11e1685]: "00"
+                  - generic [ref=f11e1687]:
+                    - img "4.5 stars of 5" [ref=f11e1688]:
+                      - img "star_full" [ref=f11e1689]
+                      - img "star_full" [ref=f11e1691]
+                      - img "star_full" [ref=f11e1693]
+                      - img "star_full" [ref=f11e1695]
+                      - img "star_half" [ref=f11e1697]
+                    - generic [ref=f11e1699]: (11)
+            - link "Consola fija PS5 de 2 TB edición bundle Playstation Consola fija PS5 de 2 TB edición bundle Playstation PLAYSTATION Consola fija PS5 de 2 TB edición bundle $24,99900$25,99900" [ref=f11e1700] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-2-tb-edicion-bundle-playstation/1199077721
+              - generic [ref=f11e1701]:
+                - generic [ref=f11e1704]:
+                  - img "Consola fija PS5 de 2 TB edición bundle Playstation" [ref=f11e1705]
+                  - img "Consola fija PS5 de 2 TB edición bundle Playstation" [ref=f11e1706]
+                - generic [ref=f11e1707]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1708]
+                  - heading "Consola fija PS5 de 2 TB edición bundle" [level=3] [ref=f11e1709]
+                  - generic [ref=f11e1711]:
+                    - generic [ref=f11e1712]:
+                      - generic [ref=f11e1713]: $24,999
+                      - generic [ref=f11e1714]: "00"
+                    - generic [ref=f11e1715]:
+                      - generic [ref=f11e1716]: $25,999
+                      - generic [ref=f11e1717]: "00"
+            - link "Consola fija ps5 de 2 tb Sony Consola fija ps5 de 2 tb Sony SONY Consola fija ps5 de 2 tb $24,99900" [ref=f11e1718] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-fija-ps5-de-2-tb-sony/1168512291
+              - generic [ref=f11e1719]:
+                - generic [ref=f11e1722]:
+                  - img "Consola fija ps5 de 2 tb Sony" [ref=f11e1723]
+                  - img "Consola fija ps5 de 2 tb Sony" [ref=f11e1724]
+                - generic [ref=f11e1725]:
+                  - heading "SONY" [level=4] [ref=f11e1726]
+                  - heading "Consola fija ps5 de 2 tb" [level=3] [ref=f11e1727]
+                  - generic [ref=f11e1729]:
+                    - generic [ref=f11e1730]: $24,999
+                    - generic [ref=f11e1731]: "00"
+            - link "God of War Ragnarok Playstation bundle para PS5 God of War Ragnarok Playstation bundle para PS5 PLAYSTATION God of War Ragnarok bundle para PS5 $88900$1,49900 5 stars of 5 (1)" [ref=f11e1732] [cursor=pointer]:
+              - /url: /tienda/pdp/god-of-war-ragnarok-playstation-bundle-para-ps5/1184804898
+              - generic [ref=f11e1733]:
+                - generic [ref=f11e1736]:
+                  - img "God of War Ragnarok Playstation bundle para PS5" [ref=f11e1737]
+                  - img "God of War Ragnarok Playstation bundle para PS5" [ref=f11e1738]
+                - generic [ref=f11e1739]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1740]
+                  - heading "God of War Ragnarok bundle para PS5" [level=3] [ref=f11e1741]
+                  - generic [ref=f11e1743]:
+                    - generic [ref=f11e1744]:
+                      - generic [ref=f11e1745]: $889
+                      - generic [ref=f11e1746]: "00"
+                    - generic [ref=f11e1747]:
+                      - generic [ref=f11e1748]: $1,499
+                      - generic [ref=f11e1749]: "00"
+                  - generic [ref=f11e1751]:
+                    - img "5 stars of 5" [ref=f11e1752]:
+                      - img "star_full" [ref=f11e1753]
+                      - img "star_full" [ref=f11e1755]
+                      - img "star_full" [ref=f11e1757]
+                      - img "star_full" [ref=f11e1759]
+                      - img "star_full" [ref=f11e1761]
+                    - generic [ref=f11e1763]: (1)
+            - link "Marvel’S Spider-Man 2 Playstation estándar para PS5 Marvel’S Spider-Man 2 Playstation estándar para PS5 PLAYSTATION Marvel’S Spider-Man 2 estándar para PS5 $1,49900 4.5 stars of 5 (179)" [ref=f11e1764] [cursor=pointer]:
+              - /url: /tienda/pdp/marvel-s-spider-man-2-playstation-estandar-para-ps5/1138269929
+              - generic [ref=f11e1765]:
+                - generic [ref=f11e1768]:
+                  - img "Marvel’S Spider-Man 2 Playstation estándar para PS5" [ref=f11e1769]
+                  - img "Marvel’S Spider-Man 2 Playstation estándar para PS5" [ref=f11e1770]
+                - generic [ref=f11e1771]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1772]
+                  - heading "Marvel’S Spider-Man 2 estándar para PS5" [level=3] [ref=f11e1773]
+                  - generic [ref=f11e1775]:
+                    - generic [ref=f11e1776]: $1,499
+                    - generic [ref=f11e1777]: "00"
+                  - generic [ref=f11e1779]:
+                    - img "4.5 stars of 5" [ref=f11e1780]:
+                      - img "star_full" [ref=f11e1781]
+                      - img "star_full" [ref=f11e1783]
+                      - img "star_full" [ref=f11e1785]
+                      - img "star_full" [ref=f11e1787]
+                      - img "star_half" [ref=f11e1789]
+                    - generic [ref=f11e1791]: (179)
+            - link "Assassin'S Creed Shadows Ubisoft estándar para PS5 Assassin'S Creed Shadows Ubisoft estándar para PS5 PLAYSTATION Assassin'S Creed Shadows estándar para PS5 $79900 5 stars of 5 (6)" [ref=f11e1792] [cursor=pointer]:
+              - /url: /tienda/pdp/assassin-s-creed-shadows-ubisoft-estandar-para-ps5/1157252760
+              - generic [ref=f11e1793]:
+                - generic [ref=f11e1796]:
+                  - img "Assassin'S Creed Shadows Ubisoft estándar para PS5" [ref=f11e1797]
+                  - img "Assassin'S Creed Shadows Ubisoft estándar para PS5" [ref=f11e1798]
+                - generic [ref=f11e1799]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1800]
+                  - heading "Assassin'S Creed Shadows estándar para PS5" [level=3] [ref=f11e1801]
+                  - generic [ref=f11e1803]:
+                    - generic [ref=f11e1804]: $799
+                    - generic [ref=f11e1805]: "00"
+                  - generic [ref=f11e1807]:
+                    - img "5 stars of 5" [ref=f11e1808]:
+                      - img "star_full" [ref=f11e1809]
+                      - img "star_full" [ref=f11e1811]
+                      - img "star_full" [ref=f11e1813]
+                      - img "star_full" [ref=f11e1815]
+                      - img "star_full" [ref=f11e1817]
+                    - generic [ref=f11e1819]: (6)
+            - link "Mortal Kombat 11 Playstation ultimate para PS5 PLAYSTATION Mortal Kombat 11 ultimate para PS5 $64900$1,69900 4.5 stars of 5 (12)" [ref=f11e1820] [cursor=pointer]:
+              - /url: /tienda/pdp/mortal-kombat-11-playstation-ultimate-para-ps5/1102448819
+              - generic [ref=f11e1821]:
+                - img "Mortal Kombat 11 Playstation ultimate para PS5" [ref=f11e1824]
+                - generic [ref=f11e1825]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1826]
+                  - heading "Mortal Kombat 11 ultimate para PS5" [level=3] [ref=f11e1827]
+                  - generic [ref=f11e1829]:
+                    - generic [ref=f11e1830]:
+                      - generic [ref=f11e1831]: $649
+                      - generic [ref=f11e1832]: "00"
+                    - generic [ref=f11e1833]:
+                      - generic [ref=f11e1834]: $1,699
+                      - generic [ref=f11e1835]: "00"
+                  - generic [ref=f11e1837]:
+                    - img "4.5 stars of 5" [ref=f11e1838]:
+                      - img "star_full" [ref=f11e1839]
+                      - img "star_full" [ref=f11e1841]
+                      - img "star_full" [ref=f11e1843]
+                      - img "star_full" [ref=f11e1845]
+                      - img "star_half" [ref=f11e1847]
+                    - generic [ref=f11e1849]: (12)
+            - link "Reproductor remoto para consola Playstation Portal Midnight Black para Playstation 5 Reproductor remoto para consola Playstation Portal Midnight Black para Playstation 5 PLAYSTATION Reproductor remoto para consola Portal Midnight Black para 5 $5,99900 5 stars of 5 (8)" [ref=f11e1850] [cursor=pointer]:
+              - /url: /tienda/pdp/reproductor-remoto-para-consola-playstation-portal-midnight-black-para-playstation-5/1171452984
+              - generic [ref=f11e1851]:
+                - generic [ref=f11e1854]:
+                  - img "Reproductor remoto para consola Playstation Portal Midnight Black para Playstation 5" [ref=f11e1855]
+                  - img "Reproductor remoto para consola Playstation Portal Midnight Black para Playstation 5" [ref=f11e1856]
+                - generic [ref=f11e1857]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1858]
+                  - heading "Reproductor remoto para consola Portal Midnight Black para 5" [level=3] [ref=f11e1859]
+                  - generic [ref=f11e1861]:
+                    - generic [ref=f11e1862]: $5,999
+                    - generic [ref=f11e1863]: "00"
+                  - generic [ref=f11e1865]:
+                    - img "5 stars of 5" [ref=f11e1866]:
+                      - img "star_full" [ref=f11e1867]
+                      - img "star_full" [ref=f11e1869]
+                      - img "star_full" [ref=f11e1871]
+                      - img "star_full" [ref=f11e1873]
+                      - img "star_full" [ref=f11e1875]
+                    - generic [ref=f11e1877]: (8)
+            - link "Mortal Kombat 1 Playstation estándar para PS5 Mortal Kombat 1 Playstation estándar para PS5 PLAYSTATION Mortal Kombat 1 estándar para PS5 $84900$2,49900 4.5 stars of 5 (10)" [ref=f11e1878] [cursor=pointer]:
+              - /url: /tienda/pdp/mortal-kombat-1-playstation-estandar-para-ps5/1141555151
+              - generic [ref=f11e1879]:
+                - generic [ref=f11e1882]:
+                  - img "Mortal Kombat 1 Playstation estándar para PS5" [ref=f11e1883]
+                  - img "Mortal Kombat 1 Playstation estándar para PS5" [ref=f11e1884]
+                - generic [ref=f11e1885]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1886]
+                  - heading "Mortal Kombat 1 estándar para PS5" [level=3] [ref=f11e1887]
+                  - generic [ref=f11e1889]:
+                    - generic [ref=f11e1890]:
+                      - generic [ref=f11e1891]: $849
+                      - generic [ref=f11e1892]: "00"
+                    - generic [ref=f11e1893]:
+                      - generic [ref=f11e1894]: $2,499
+                      - generic [ref=f11e1895]: "00"
+                  - generic [ref=f11e1897]:
+                    - img "4.5 stars of 5" [ref=f11e1898]:
+                      - img "star_full" [ref=f11e1899]
+                      - img "star_full" [ref=f11e1901]
+                      - img "star_full" [ref=f11e1903]
+                      - img "star_full" [ref=f11e1905]
+                      - img "star_half" [ref=f11e1907]
+                    - generic [ref=f11e1909]: (10)
+            - link "Black Myth Wukong Playstation estándar para PS5 Black Myth Wukong Playstation estándar para PS5 PLAYSTATION Black Myth Wukong estándar para PS5 $1,34900 4.5 stars of 5 (34)" [ref=f11e1910] [cursor=pointer]:
+              - /url: /tienda/pdp/black-myth-wukong-playstation-estandar-para-ps5/1166734980
+              - generic [ref=f11e1911]:
+                - generic [ref=f11e1914]:
+                  - img "Black Myth Wukong Playstation estándar para PS5" [ref=f11e1915]
+                  - img "Black Myth Wukong Playstation estándar para PS5" [ref=f11e1916]
+                - generic [ref=f11e1917]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1918]
+                  - heading "Black Myth Wukong estándar para PS5" [level=3] [ref=f11e1919]
+                  - generic [ref=f11e1921]:
+                    - generic [ref=f11e1922]: $1,349
+                    - generic [ref=f11e1923]: "00"
+                  - generic [ref=f11e1925]:
+                    - img "4.5 stars of 5" [ref=f11e1926]:
+                      - img "star_full" [ref=f11e1927]
+                      - img "star_full" [ref=f11e1929]
+                      - img "star_full" [ref=f11e1931]
+                      - img "star_full" [ref=f11e1933]
+                      - img "star_half" [ref=f11e1935]
+                    - generic [ref=f11e1937]: (34)
+            - link "Killer Klowns from Outer Space Playstation 5 estándar para PS5 Killer Klowns from Outer Space Playstation 5 estándar para PS5 PLAYSTATION 5 Killer Klowns from Outer Space estándar para PS5 $62899$5,70200" [ref=f11e1938] [cursor=pointer]:
+              - /url: /tienda/pdp/killer-klowns-from-outer-space-playstation-5-estandar-para-ps5/1196498717
+              - generic [ref=f11e1939]:
+                - generic [ref=f11e1942]:
+                  - img "Killer Klowns from Outer Space Playstation 5 estándar para PS5" [ref=f11e1943]
+                  - img "Killer Klowns from Outer Space Playstation 5 estándar para PS5" [ref=f11e1944]
+                - generic [ref=f11e1945]:
+                  - heading "PLAYSTATION 5" [level=4] [ref=f11e1946]
+                  - heading "Killer Klowns from Outer Space estándar para PS5" [level=3] [ref=f11e1947]
+                  - generic [ref=f11e1949]:
+                    - generic [ref=f11e1950]:
+                      - generic [ref=f11e1951]: $628
+                      - generic [ref=f11e1952]: "99"
+                    - generic [ref=f11e1953]:
+                      - generic [ref=f11e1954]: $5,702
+                      - generic [ref=f11e1955]: "00"
+            - link "Ghost Of Yotei Playstation estándar para PS5 Ghost Of Yotei Playstation estándar para PS5 PLAYSTATION Ghost Of Yotei estándar para PS5 $1,44400 5 stars of 5 (13)" [ref=f11e1956] [cursor=pointer]:
+              - /url: /tienda/pdp/ghost-of-yotei-playstation-estandar-para-ps5/1178421073
+              - generic [ref=f11e1957]:
+                - generic [ref=f11e1960]:
+                  - img "Ghost Of Yotei Playstation estándar para PS5" [ref=f11e1961]
+                  - img "Ghost Of Yotei Playstation estándar para PS5" [ref=f11e1962]
+                - generic [ref=f11e1963]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1964]
+                  - heading "Ghost Of Yotei estándar para PS5" [level=3] [ref=f11e1965]
+                  - generic [ref=f11e1967]:
+                    - generic [ref=f11e1968]: $1,444
+                    - generic [ref=f11e1969]: "00"
+                  - generic [ref=f11e1971]:
+                    - img "5 stars of 5" [ref=f11e1972]:
+                      - img "star_full" [ref=f11e1973]
+                      - img "star_full" [ref=f11e1975]
+                      - img "star_full" [ref=f11e1977]
+                      - img "star_full" [ref=f11e1979]
+                      - img "star_full" [ref=f11e1981]
+                    - generic [ref=f11e1983]: (13)
+            - 'link "Metal Gear Solid Δ: Snake Eater Konami estándar para PS5 Metal Gear Solid Δ: Snake Eater Konami estándar para PS5 PLAYSTATION Metal Gear Solid Δ: Snake Eater estándar para PS5 $49950$99900 4.5 stars of 5 (23)" [ref=f11e1984] [cursor=pointer]':
+              - /url: /tienda/pdp/metal-gear-solid-snake-eater-konami-estandar-para-ps5/1159056186
+              - generic [ref=f11e1985]:
+                - generic [ref=f11e1988]:
+                  - 'img "Metal Gear Solid Δ: Snake Eater Konami estándar para PS5" [ref=f11e1989]'
+                  - 'img "Metal Gear Solid Δ: Snake Eater Konami estándar para PS5" [ref=f11e1990]'
+                - generic [ref=f11e1991]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e1992]
+                  - 'heading "Metal Gear Solid Δ: Snake Eater estándar para PS5" [level=3] [ref=f11e1993]'
+                  - generic [ref=f11e1995]:
+                    - generic [ref=f11e1996]:
+                      - generic [ref=f11e1997]: $499
+                      - generic [ref=f11e1998]: "50"
+                    - generic [ref=f11e1999]:
+                      - generic [ref=f11e2000]: $999
+                      - generic [ref=f11e2001]: "00"
+                  - generic [ref=f11e2003]:
+                    - img "4.5 stars of 5" [ref=f11e2004]:
+                      - img "star_full" [ref=f11e2005]
+                      - img "star_full" [ref=f11e2007]
+                      - img "star_full" [ref=f11e2009]
+                      - img "star_full" [ref=f11e2011]
+                      - img "star_half" [ref=f11e2013]
+                    - generic [ref=f11e2015]: (23)
+            - 'link "Mouse: P.I. For Hire Playstation estándar para PS5 Mouse: P.I. For Hire Playstation estándar para PS5 PS (V678) Mouse: P.I. For Hire Playstation estándar para 5 $69900" [ref=f11e2016] [cursor=pointer]':
+              - /url: /tienda/pdp/mouse-p-i-for-hire-playstation-estandar-para-ps5/1197942734
+              - generic [ref=f11e2017]:
+                - generic [ref=f11e2020]:
+                  - 'img "Mouse: P.I. For Hire Playstation estándar para PS5" [ref=f11e2021]'
+                  - 'img "Mouse: P.I. For Hire Playstation estándar para PS5" [ref=f11e2022]'
+                - generic [ref=f11e2023]:
+                  - heading "PS (V678)" [level=4] [ref=f11e2024]
+                  - 'heading "Mouse: P.I. For Hire Playstation estándar para 5" [level=3] [ref=f11e2025]'
+                  - generic [ref=f11e2027]:
+                    - generic [ref=f11e2028]: $699
+                    - generic [ref=f11e2029]: "00"
+            - link "Crimson Desert PlayStation Bundle para PS5 Crimson Desert PlayStation Bundle para PS5 PLAYSTATION Crimson Desert Bundle para PS5 $1,49900$1,69900" [ref=f11e2030] [cursor=pointer]:
+              - /url: /tienda/pdp/crimson-desert-playstation-bundle-para-ps5/1197811885
+              - generic [ref=f11e2031]:
+                - generic [ref=f11e2034]:
+                  - img "Crimson Desert PlayStation Bundle para PS5" [ref=f11e2035]
+                  - img "Crimson Desert PlayStation Bundle para PS5" [ref=f11e2036]
+                - generic [ref=f11e2037]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2038]
+                  - heading "Crimson Desert Bundle para PS5" [level=3] [ref=f11e2039]
+                  - generic [ref=f11e2041]:
+                    - generic [ref=f11e2042]:
+                      - generic [ref=f11e2043]: $1,499
+                      - generic [ref=f11e2044]: "00"
+                    - generic [ref=f11e2045]:
+                      - generic [ref=f11e2046]: $1,699
+                      - generic [ref=f11e2047]: "00"
+            - link "Control Resonant Steelbook Edition Playstation especial para PS5 Control Resonant Steelbook Edition Playstation especial para PS5 PLAYSTATION Control Resonant Steelbook Edition especial para PS5 $1,59900 Preventa" [ref=f11e2048] [cursor=pointer]:
+              - /url: /tienda/pdp/control-resonant-steelbook-edition-playstation-especial-para-ps5/1203255736
+              - generic [ref=f11e2049]:
+                - generic [ref=f11e2052]:
+                  - img "Control Resonant Steelbook Edition Playstation especial para PS5" [ref=f11e2053]
+                  - img "Control Resonant Steelbook Edition Playstation especial para PS5" [ref=f11e2054]
+                - generic [ref=f11e2055]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2056]
+                  - heading "Control Resonant Steelbook Edition especial para PS5" [level=3] [ref=f11e2057]
+                  - generic [ref=f11e2059]:
+                    - generic [ref=f11e2060]: $1,599
+                    - generic [ref=f11e2061]: "00"
+                  - generic [ref=f11e2062]: Preventa
+            - link "Soporte para consola fijo PlayStation Soporte para consola fijo PlayStation PLAYSTATION Soporte para consola fijo $74900 5 stars of 5 (10)" [ref=f11e2066] [cursor=pointer]:
+              - /url: /tienda/pdp/soporte-para-consola-fijo-playstation/1148828993
+              - generic [ref=f11e2067]:
+                - generic [ref=f11e2070]:
+                  - img "Soporte para consola fijo PlayStation" [ref=f11e2071]
+                  - img "Soporte para consola fijo PlayStation" [ref=f11e2072]
+                - generic [ref=f11e2073]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2074]
+                  - heading "Soporte para consola fijo" [level=3] [ref=f11e2075]
+                  - generic [ref=f11e2077]:
+                    - generic [ref=f11e2078]: $749
+                    - generic [ref=f11e2079]: "00"
+                  - generic [ref=f11e2081]:
+                    - img "5 stars of 5" [ref=f11e2082]:
+                      - img "star_full" [ref=f11e2083]
+                      - img "star_full" [ref=f11e2085]
+                      - img "star_full" [ref=f11e2087]
+                      - img "star_full" [ref=f11e2089]
+                      - img "star_full" [ref=f11e2091]
+                    - generic [ref=f11e2093]: (10)
+            - link "Call of Duty Modern Warfare II Playstation estándar para PS5 Call of Duty Modern Warfare II Playstation estándar para PS5 PLAYSTATION Call of Duty Modern Warfare II estándar para PS5 $88900$1,49900 5 stars of 5 (4)" [ref=f11e2094] [cursor=pointer]:
+              - /url: /tienda/pdp/call-of-duty-modern-warfare-ii-playstation-estandar-para-ps5/1183943703
+              - generic [ref=f11e2095]:
+                - generic [ref=f11e2098]:
+                  - img "Call of Duty Modern Warfare II Playstation estándar para PS5" [ref=f11e2099]
+                  - img "Call of Duty Modern Warfare II Playstation estándar para PS5" [ref=f11e2100]
+                - generic [ref=f11e2101]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2102]
+                  - heading "Call of Duty Modern Warfare II estándar para PS5" [level=3] [ref=f11e2103]
+                  - generic [ref=f11e2105]:
+                    - generic [ref=f11e2106]:
+                      - generic [ref=f11e2107]: $889
+                      - generic [ref=f11e2108]: "00"
+                    - generic [ref=f11e2109]:
+                      - generic [ref=f11e2110]: $1,499
+                      - generic [ref=f11e2111]: "00"
+                  - generic [ref=f11e2113]:
+                    - img "5 stars of 5" [ref=f11e2114]:
+                      - img "star_full" [ref=f11e2115]
+                      - img "star_full" [ref=f11e2117]
+                      - img "star_full" [ref=f11e2119]
+                      - img "star_full" [ref=f11e2121]
+                      - img "star_full" [ref=f11e2123]
+                    - generic [ref=f11e2125]: (4)
+            - link "Grand Theft Auto The Trilogy Playstation estándar para PS4 Grand Theft Auto The Trilogy Playstation estándar para PS4 PLAYSTATION Grand Theft Auto The Trilogy estándar para PS4 $64900$1,49800 5 stars of 5 (4)" [ref=f11e2126] [cursor=pointer]:
+              - /url: /tienda/pdp/grand-theft-auto-the-trilogy-playstation-estandar-para-ps4/1160761683
+              - generic [ref=f11e2127]:
+                - generic [ref=f11e2130]:
+                  - img "Grand Theft Auto The Trilogy Playstation estándar para PS4" [ref=f11e2131]
+                  - img "Grand Theft Auto The Trilogy Playstation estándar para PS4" [ref=f11e2132]
+                - generic [ref=f11e2133]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2134]
+                  - heading "Grand Theft Auto The Trilogy estándar para PS4" [level=3] [ref=f11e2135]
+                  - generic [ref=f11e2137]:
+                    - generic [ref=f11e2138]:
+                      - generic [ref=f11e2139]: $649
+                      - generic [ref=f11e2140]: "00"
+                    - generic [ref=f11e2141]:
+                      - generic [ref=f11e2142]: $1,498
+                      - generic [ref=f11e2143]: "00"
+                  - generic [ref=f11e2145]:
+                    - img "5 stars of 5" [ref=f11e2146]:
+                      - img "star_full" [ref=f11e2147]
+                      - img "star_full" [ref=f11e2149]
+                      - img "star_full" [ref=f11e2151]
+                      - img "star_full" [ref=f11e2153]
+                      - img "star_full" [ref=f11e2155]
+                    - generic [ref=f11e2157]: (4)
+            - link "Control Playstation Dualsense inalámbrico para Playstation 5 edición especial Control Playstation Dualsense inalámbrico para Playstation 5 edición especial PLAYSTATION Control Dualsense inalámbrico para Playstation 5 edición especial $1,79900 5 stars of 5 (6)" [ref=f11e2158] [cursor=pointer]:
+              - /url: /tienda/pdp/control-playstation-dualsense-inalambrico-para-playstation-5-edicion-especial/1192941934
+              - generic [ref=f11e2159]:
+                - generic [ref=f11e2162]:
+                  - img "Control Playstation Dualsense inalámbrico para Playstation 5 edición especial" [ref=f11e2163]
+                  - img "Control Playstation Dualsense inalámbrico para Playstation 5 edición especial" [ref=f11e2164]
+                - generic [ref=f11e2165]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2166]
+                  - heading "Control Dualsense inalámbrico para Playstation 5 edición especial" [level=3] [ref=f11e2167]
+                  - generic [ref=f11e2169]:
+                    - generic [ref=f11e2170]: $1,799
+                    - generic [ref=f11e2171]: "00"
+                  - generic [ref=f11e2173]:
+                    - img "5 stars of 5" [ref=f11e2174]:
+                      - img "star_full" [ref=f11e2175]
+                      - img "star_full" [ref=f11e2177]
+                      - img "star_full" [ref=f11e2179]
+                      - img "star_full" [ref=f11e2181]
+                      - img "star_full" [ref=f11e2183]
+                    - generic [ref=f11e2185]: (6)
+            - link "Assasin'S Creed Mirage Playstation 5 estándar para PS5 Assasin'S Creed Mirage Playstation 5 estándar para PS5 PLAYSTATION 5 Assasin'S Creed Mirage estándar para PS5 $79900 5 stars of 5 (1)" [ref=f11e2186] [cursor=pointer]:
+              - /url: /tienda/pdp/assasin-s-creed-mirage-playstation-5-estandar-para-ps5/1142290487
+              - generic [ref=f11e2187]:
+                - generic [ref=f11e2190]:
+                  - img "Assasin'S Creed Mirage Playstation 5 estándar para PS5" [ref=f11e2191]
+                  - img "Assasin'S Creed Mirage Playstation 5 estándar para PS5" [ref=f11e2192]
+                - generic [ref=f11e2193]:
+                  - heading "PLAYSTATION 5" [level=4] [ref=f11e2194]
+                  - heading "Assasin'S Creed Mirage estándar para PS5" [level=3] [ref=f11e2195]
+                  - generic [ref=f11e2197]:
+                    - generic [ref=f11e2198]: $799
+                    - generic [ref=f11e2199]: "00"
+                  - generic [ref=f11e2201]:
+                    - img "5 stars of 5" [ref=f11e2202]:
+                      - img "star_full" [ref=f11e2203]
+                      - img "star_full" [ref=f11e2205]
+                      - img "star_full" [ref=f11e2207]
+                      - img "star_full" [ref=f11e2209]
+                      - img "star_full" [ref=f11e2211]
+                    - generic [ref=f11e2213]: (1)
+            - link "Gears Of War Reloaded Playstation estándar para PS5 Gears Of War Reloaded Playstation estándar para PS5 PLAYSTATION Gears Of War Reloaded estándar para PS5 $99900$1,49900 5 stars of 5 (20)" [ref=f11e2214] [cursor=pointer]:
+              - /url: /tienda/pdp/gears-of-war-reloaded-playstation-estandar-para-ps5/1180806047
+              - generic [ref=f11e2215]:
+                - generic [ref=f11e2218]:
+                  - img "Gears Of War Reloaded Playstation estándar para PS5" [ref=f11e2219]
+                  - img "Gears Of War Reloaded Playstation estándar para PS5" [ref=f11e2220]
+                - generic [ref=f11e2221]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2222]
+                  - heading "Gears Of War Reloaded estándar para PS5" [level=3] [ref=f11e2223]
+                  - generic [ref=f11e2225]:
+                    - generic [ref=f11e2226]:
+                      - generic [ref=f11e2227]: $999
+                      - generic [ref=f11e2228]: "00"
+                    - generic [ref=f11e2229]:
+                      - generic [ref=f11e2230]: $1,499
+                      - generic [ref=f11e2231]: "00"
+                  - generic [ref=f11e2233]:
+                    - img "5 stars of 5" [ref=f11e2234]:
+                      - img "star_full" [ref=f11e2235]
+                      - img "star_full" [ref=f11e2237]
+                      - img "star_full" [ref=f11e2239]
+                      - img "star_full" [ref=f11e2241]
+                      - img "star_full" [ref=f11e2243]
+                    - generic [ref=f11e2245]: (20)
+            - link "Astro Bot Playstation estándar para PS5 Astro Bot Playstation estándar para PS5 PLAYSTATION Astro Bot estándar para PS5 $1,19900 4.5 stars of 5 (89)" [ref=f11e2246] [cursor=pointer]:
+              - /url: /tienda/pdp/astro-bot-playstation-estandar-para-ps5/1158123815
+              - generic [ref=f11e2247]:
+                - generic [ref=f11e2250]:
+                  - img "Astro Bot Playstation estándar para PS5" [ref=f11e2251]
+                  - img "Astro Bot Playstation estándar para PS5" [ref=f11e2252]
+                - generic [ref=f11e2253]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2254]
+                  - heading "Astro Bot estándar para PS5" [level=3] [ref=f11e2255]
+                  - generic [ref=f11e2257]:
+                    - generic [ref=f11e2258]: $1,199
+                    - generic [ref=f11e2259]: "00"
+                  - generic [ref=f11e2261]:
+                    - img "4.5 stars of 5" [ref=f11e2262]:
+                      - img "star_full" [ref=f11e2263]
+                      - img "star_full" [ref=f11e2265]
+                      - img "star_full" [ref=f11e2267]
+                      - img "star_full" [ref=f11e2269]
+                      - img "star_half" [ref=f11e2271]
+                    - generic [ref=f11e2273]: (89)
+            - link "Consola de edición PlayStation Consola de edición PlayStation SONY PLAYSTATION Consola de edición PlayStation $9,30900$11,99900" [ref=f11e2274] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-de-edicion-playstation/999674407498
+              - generic [ref=f11e2275]:
+                - generic [ref=f11e2278]:
+                  - img "Consola de edición PlayStation" [ref=f11e2279]
+                  - img "Consola de edición PlayStation" [ref=f11e2280]
+                - generic [ref=f11e2281]:
+                  - heading "SONY PLAYSTATION" [level=4] [ref=f11e2282]
+                  - heading "Consola de edición PlayStation" [level=3] [ref=f11e2283]
+                  - generic [ref=f11e2285]:
+                    - generic [ref=f11e2286]:
+                      - generic [ref=f11e2287]: $9,309
+                      - generic [ref=f11e2288]: "00"
+                    - generic [ref=f11e2289]:
+                      - generic [ref=f11e2290]: $11,999
+                      - generic [ref=f11e2291]: "00"
+            - link "Disney Illusion Island Starring Mickey & Friends Playstation estándar para PS5 Disney Illusion Island Starring Mickey & Friends Playstation estándar para PS5 PLAYSTATION Disney Illusion Island Starring Mickey & Friends estándar para PS5 $54900$63900" [ref=f11e2292] [cursor=pointer]:
+              - /url: /tienda/pdp/disney-illusion-island-starring-mickey-friends-playstation-estandar-para-ps5/1177930501
+              - generic [ref=f11e2293]:
+                - generic [ref=f11e2296]:
+                  - img "Disney Illusion Island Starring Mickey & Friends Playstation estándar para PS5" [ref=f11e2297]
+                  - img "Disney Illusion Island Starring Mickey & Friends Playstation estándar para PS5" [ref=f11e2298]
+                - generic [ref=f11e2299]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2300]
+                  - heading "Disney Illusion Island Starring Mickey & Friends estándar para PS5" [level=3] [ref=f11e2301]
+                  - generic [ref=f11e2303]:
+                    - generic [ref=f11e2304]:
+                      - generic [ref=f11e2305]: $549
+                      - generic [ref=f11e2306]: "00"
+                    - generic [ref=f11e2307]:
+                      - generic [ref=f11e2308]: $639
+                      - generic [ref=f11e2309]: "00"
+            - link "Scarlet Nexus Playstation estándar para PS5 Scarlet Nexus Playstation estándar para PS5 PLAYSTATION Scarlet Nexus estándar para PS5 $59899$2,57000" [ref=f11e2310] [cursor=pointer]:
+              - /url: /tienda/pdp/scarlet-nexus-playstation-estandar-para-ps5/1107718377
+              - generic [ref=f11e2311]:
+                - generic [ref=f11e2314]:
+                  - img "Scarlet Nexus Playstation estándar para PS5" [ref=f11e2315]
+                  - img "Scarlet Nexus Playstation estándar para PS5" [ref=f11e2316]
+                - generic [ref=f11e2317]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2318]
+                  - heading "Scarlet Nexus estándar para PS5" [level=3] [ref=f11e2319]
+                  - generic [ref=f11e2321]:
+                    - generic [ref=f11e2322]:
+                      - generic [ref=f11e2323]: $598
+                      - generic [ref=f11e2324]: "99"
+                    - generic [ref=f11e2325]:
+                      - generic [ref=f11e2326]: $2,570
+                      - generic [ref=f11e2327]: "00"
+            - link "Control Sony inalámbrico para playstation 5 edición especial Control Sony inalámbrico para playstation 5 edición especial SONY Control inalámbrico para playstation 5 edición especial $5,39900$9,89900 4 stars of 5 (3)" [ref=f11e2328] [cursor=pointer]:
+              - /url: /tienda/pdp/control-sony-inalambrico-para-playstation-5-edicion-especial/1180311170
+              - generic [ref=f11e2329]:
+                - generic [ref=f11e2332]:
+                  - img "Control Sony inalámbrico para playstation 5 edición especial" [ref=f11e2333]
+                  - img "Control Sony inalámbrico para playstation 5 edición especial" [ref=f11e2334]
+                - generic [ref=f11e2335]:
+                  - heading "SONY" [level=4] [ref=f11e2336]
+                  - heading "Control inalámbrico para playstation 5 edición especial" [level=3] [ref=f11e2337]
+                  - generic [ref=f11e2339]:
+                    - generic [ref=f11e2340]:
+                      - generic [ref=f11e2341]: $5,399
+                      - generic [ref=f11e2342]: "00"
+                    - generic [ref=f11e2343]:
+                      - generic [ref=f11e2344]: $9,899
+                      - generic [ref=f11e2345]: "00"
+                  - generic [ref=f11e2347]:
+                    - img "4 stars of 5" [ref=f11e2348]:
+                      - img "star_full" [ref=f11e2349]
+                      - img "star_full" [ref=f11e2351]
+                      - img "star_full" [ref=f11e2353]
+                      - img "star_full" [ref=f11e2355]
+                      - img "star_empty" [ref=f11e2357]
+                    - generic [ref=f11e2359]: (3)
+            - link "Consola Nintendo Switch 2 de 256 GB edición estándar Consola Nintendo Switch 2 de 256 GB edición estándar NINTENDO Consola Switch 2 de 256 GB edición estándar $10,19925$13,59900 4.5 stars of 5 (45)" [ref=f11e2360] [cursor=pointer]:
+              - /url: /tienda/pdp/consola-nintendo-switch-2-de-256-gb-edicion-estandar/1177646322
+              - generic [ref=f11e2361]:
+                - generic [ref=f11e2364]:
+                  - img "Consola Nintendo Switch 2 de 256 GB edición estándar" [ref=f11e2365]
+                  - img "Consola Nintendo Switch 2 de 256 GB edición estándar" [ref=f11e2366]
+                - generic [ref=f11e2367]:
+                  - heading "NINTENDO" [level=4] [ref=f11e2368]
+                  - heading "Consola Switch 2 de 256 GB edición estándar" [level=3] [ref=f11e2369]
+                  - generic [ref=f11e2371]:
+                    - generic [ref=f11e2372]:
+                      - generic [ref=f11e2373]: $10,199
+                      - generic [ref=f11e2374]: "25"
+                    - generic [ref=f11e2375]:
+                      - generic [ref=f11e2376]: $13,599
+                      - generic [ref=f11e2377]: "00"
+                  - generic [ref=f11e2379]:
+                    - img "4.5 stars of 5" [ref=f11e2380]:
+                      - img "star_full" [ref=f11e2381]
+                      - img "star_full" [ref=f11e2383]
+                      - img "star_full" [ref=f11e2385]
+                      - img "star_full" [ref=f11e2387]
+                      - img "star_half" [ref=f11e2389]
+                    - generic [ref=f11e2391]: (45)
+            - link "Control Playstation inalámbrico para playstation 5 edición limitada Fortnite Control Playstation inalámbrico para playstation 5 edición limitada Fortnite PLAYSTATION Control inalámbrico para playstation 5 edición limitada Fortnite $2,22900$2,99900 5 stars of 5 (12)" [ref=f11e2392] [cursor=pointer]:
+              - /url: /tienda/pdp/control-playstation-inalambrico-para-playstation-5-edicion-limitada-fortnite/1165792731
+              - generic [ref=f11e2393]:
+                - generic [ref=f11e2396]:
+                  - img "Control Playstation inalámbrico para playstation 5 edición limitada Fortnite" [ref=f11e2397]
+                  - img "Control Playstation inalámbrico para playstation 5 edición limitada Fortnite" [ref=f11e2398]
+                - generic [ref=f11e2399]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2400]
+                  - heading "Control inalámbrico para playstation 5 edición limitada Fortnite" [level=3] [ref=f11e2401]
+                  - generic [ref=f11e2403]:
+                    - generic [ref=f11e2404]:
+                      - generic [ref=f11e2405]: $2,229
+                      - generic [ref=f11e2406]: "00"
+                    - generic [ref=f11e2407]:
+                      - generic [ref=f11e2408]: $2,999
+                      - generic [ref=f11e2409]: "00"
+                  - generic [ref=f11e2411]:
+                    - img "5 stars of 5" [ref=f11e2412]:
+                      - img "star_full" [ref=f11e2413]
+                      - img "star_full" [ref=f11e2415]
+                      - img "star_full" [ref=f11e2417]
+                      - img "star_full" [ref=f11e2419]
+                      - img "star_full" [ref=f11e2421]
+                    - generic [ref=f11e2423]: (12)
+            - link "Spongebob Squarepants A Patrick Star Game Playstation estándar para PS5 Spongebob Squarepants A Patrick Star Game Playstation estándar para PS5 PLAYSTATION Spongebob Squarepants A Patrick Star Game estándar para PS5 $58900$1,49900" [ref=f11e2424] [cursor=pointer]:
+              - /url: /tienda/pdp/spongebob-squarepants-a-patrick-star-game-playstation-estandar-para-ps5/1163797557
+              - generic [ref=f11e2425]:
+                - generic [ref=f11e2428]:
+                  - img "Spongebob Squarepants A Patrick Star Game Playstation estándar para PS5" [ref=f11e2429]
+                  - img "Spongebob Squarepants A Patrick Star Game Playstation estándar para PS5" [ref=f11e2430]
+                - generic [ref=f11e2431]:
+                  - heading "PLAYSTATION" [level=4] [ref=f11e2432]
+                  - heading "Spongebob Squarepants A Patrick Star Game estándar para PS5" [level=3] [ref=f11e2433]
+                  - generic [ref=f11e2435]:
+                    - generic [ref=f11e2436]:
+                      - generic [ref=f11e2437]: $589
+                      - generic [ref=f11e2438]: "00"
+                    - generic [ref=f11e2439]:
+                      - generic [ref=f11e2440]: $1,499
+                      - generic [ref=f11e2441]: "00"
+          - generic [ref=f11e2443]:
+            - navigation "Paginación" [ref=f11e2445]:
+              - generic [ref=f11e2446]:
+                - generic [ref=f11e2447]: Anterior
+                - generic [ref=f11e2448]: chevron_left
+              - generic [ref=f11e2449]:
+                - link "1" [ref=f11e2450] [cursor=pointer]:
+                  - /url: /tienda/page-1?s=playstation+5
+                - link "2" [ref=f11e2451] [cursor=pointer]:
+                  - /url: /tienda/page-2?s=playstation+5
+                - link "3" [ref=f11e2452] [cursor=pointer]:
+                  - /url: /tienda/page-3?s=playstation+5
+                - generic [ref=f11e2453]: ...
+                - link "27" [ref=f11e2454] [cursor=pointer]:
+                  - /url: /tienda/page-27?s=playstation+5
+                - link "28" [ref=f11e2455] [cursor=pointer]:
+                  - /url: /tienda/page-28?s=playstation+5
+              - link "Siguiente" [ref=f11e2457] [cursor=pointer]:
+                - /url: /tienda/page-2?s=playstation+5
+                - generic [ref=f11e2459]: chevron_right
+            - generic [ref=f11e2460]:
+              - paragraph [ref=f11e2461]: Página
+              - spinbutton [ref=f11e2463]: "1"
+          - generic:
+            - button "Scroll Hacia Arriba":
+              - generic: keyboard_arrow_up
+    - contentinfo [ref=f11e2464]:
+      - generic [ref=f11e2466]:
+        - navigation "Footer Navigation" [ref=f11e2467]:
+          - generic [ref=f11e2468]:
+            - heading "Soporte al cliente" [level=2] [ref=f11e2469]
+            - list [ref=f11e2470]:
+              - listitem [ref=f11e2471]:
+                - link "Facturación" [ref=f11e2472] [cursor=pointer]:
+                  - /url: https://facturacionclientes.liverpool.com.mx/FaeSferaWeb/InicioLivW/inicio.action
+              - listitem [ref=f11e2474]:
+                - link "Ayuda" [ref=f11e2475] [cursor=pointer]:
+                  - /url: https://assetspwa.liverpool.com.mx/ayuda/index.html#/
+              - listitem [ref=f11e2477]:
+                - link "Mis compras" [ref=f11e2478] [cursor=pointer]:
+                  - /url: /tienda/users/miscompras
+              - listitem [ref=f11e2480]:
+                - link "Garantía Liverpool" [ref=f11e2481] [cursor=pointer]:
+                  - /url: /tienda/paginas/garantia
+          - generic [ref=f11e2483]:
+            - heading "Servicios Liverpool" [level=2] [ref=f11e2484]
+            - list [ref=f11e2485]:
+              - listitem [ref=f11e2486]:
+                - link "Crédito" [ref=f11e2487] [cursor=pointer]:
+                  - /url: https://micredito.liverpool.com.mx/
+              - listitem [ref=f11e2489]:
+                - link "Tiempo aire" [ref=f11e2490] [cursor=pointer]:
+                  - /url: /tienda/checkout/airtimeTicket
+              - listitem [ref=f11e2492]:
+                - link "Concursos y promociones" [ref=f11e2493] [cursor=pointer]:
+                  - /url: /tienda/promotions
+              - listitem [ref=f11e2495]:
+                - link "Diseño de interiores" [ref=f11e2496] [cursor=pointer]:
+                  - /url: /tienda/paginas/diseno-interiores
+              - listitem [ref=f11e2498]:
+                - link "Ventas corporativas" [ref=f11e2499] [cursor=pointer]:
+                  - /url: /tienda/paginas/ventas-corporativas
+          - generic [ref=f11e2501]:
+            - heading "Acerca de Liverpool" [level=2] [ref=f11e2502]
+            - list [ref=f11e2503]:
+              - listitem [ref=f11e2504]:
+                - link "Bolsa de Trabajo" [ref=f11e2505] [cursor=pointer]:
+                  - /url: https://pcarrera.liverpool.com.mx/es
+              - listitem [ref=f11e2507]:
+                - link "¿Quiénes somos?" [ref=f11e2508] [cursor=pointer]:
+                  - /url: https://www.elpuertodeliverpool.mx/perfil.html
+              - listitem [ref=f11e2510]:
+                - link "Relación con inversionistas" [ref=f11e2511] [cursor=pointer]:
+                  - /url: https://www.elpuertodeliverpool.mx/
+              - listitem [ref=f11e2513]:
+                - link "Sostenibilidad" [ref=f11e2514] [cursor=pointer]:
+                  - /url: /tienda/sostenibilidad/catst61245244
+          - generic [ref=f11e2516]:
+            - heading "Promociones" [level=2] [ref=f11e2517]
+            - list [ref=f11e2518]:
+              - listitem [ref=f11e2519]:
+                - link "Venta Nocturna" [ref=f11e2520] [cursor=pointer]:
+                  - /url: /tienda/paginas/venta-nocturna
+              - listitem [ref=f11e2522]:
+                - link "Hot Sale" [ref=f11e2523] [cursor=pointer]:
+                  - /url: /tienda/hot-sale/catst52375715
+              - listitem [ref=f11e2525]:
+                - link "Buen Fin" [ref=f11e2526] [cursor=pointer]:
+                  - /url: /tienda/buen-fin/catst44480398
+              - listitem [ref=f11e2528]:
+                - link "Bolo Fest" [ref=f11e2529] [cursor=pointer]:
+                  - /url: /tienda/paginas/bolofest
+          - generic [ref=f11e2531]:
+            - paragraph [ref=f11e2532]: Ventas por teléfono 555262-9999
+            - paragraph [ref=f11e2533]: Desde tu celular *7171
+            - paragraph [ref=f11e2534]:
+              - text: Contáctanos vía
+              - link "Whatsapp" [ref=f11e2535] [cursor=pointer]:
+                - /url: https://wa.me/525552629999
+              - text: o por teléfono al 5552629999
+        - separator [ref=f11e2537]
+        - generic [ref=f11e2538]:
+          - paragraph [ref=f11e2540]: Comentarios y Sugerencias:atencion@liverpool.com.mx
+          - generic [ref=f11e2541]:
+            - link "Términos y condiciones" [ref=f11e2542] [cursor=pointer]:
+              - /url: /ayuda/index.html#/sec/terminos-y-condiciones/informacion
+            - generic [ref=f11e2544]: /
+            - link "Aviso de privacidad" [ref=f11e2545] [cursor=pointer]:
+              - /url: /ayuda/index.html#/sec/terminos-y-condiciones/proteccion-de-datos/aviso-clientes
+            - generic [ref=f11e2547]: /
+            - link "Mapa del sitio." [ref=f11e2548] [cursor=pointer]:
+              - /url: /tienda/sitemap
+          - generic [ref=f11e2550]:
+            - link "Facebook" [ref=f11e2551] [cursor=pointer]:
+              - /url: https://www.facebook.com/liverpoolmexico
+              - img "facebook" [ref=f11e2552]
+            - link "Twitter" [ref=f11e2554] [cursor=pointer]:
+              - /url: https://twitter.com/liverpoolMexico
+              - img "X" [ref=f11e2555]
+            - link "Instagram" [ref=f11e2557] [cursor=pointer]:
+              - /url: https://www.instagram.com/liverpool_mexico/
+              - img "instagram" [ref=f11e2558]
+      - generic [ref=f11e2562]:
+        - paragraph [ref=f11e2563]: Precio en rojo aplica el descuento más alto, las promociones pueden diferir de las publicadas en tienda
+        - paragraph [ref=f11e2564]: Las imágenes mostradas son para fines ilustrativos, las piezas se venden por separado
+        - paragraph [ref=f11e2565]: 2026 Liverpool / Todos los derechos reservados D.R. ®
+    - dialog [ref=f11e2567]:
+      - paragraph [ref=f11e2570]:
+        - text: Al navegar en este sitio aceptas el uso de cookies, las cuales nos ayudan a mejorar tu experiencia de navegación.
+        - link "Más información" [ref=f11e2571] [cursor=pointer]:
+          - /url: https://assetspwa.liverpool.com.mx/ayuda/index.html?_ga=2.115343438.972631667.1747089289-504402123.1747089287#/sec/terminos-y-condiciones/proteccion-de-datos/aviso-clientes--cookies
+      - button [ref=f11e2572] [cursor=pointer]:
+        - generic [ref=f11e2573]: close
+  - alert [ref=f11e2574]
+```
+
+# Test source
+
+```ts
+  1  | // utils/networkCapture.js
+  2  | 
+  3  | /**
+  4  |  * Espera y captura la respuesta de la API de catálogo/búsqueda mientras
+  5  |  * ejecuta la acción que la dispara (aplicar filtro de color, cambiar orden, etc.)
+  6  |  *
+  7  |  * IMPORTANTE: ajustar `urlPattern` con la URL real confirmada desde el HAR.
+  8  |  * Patrón provisional basado en lo ya observado (web-bff/content/*).
+  9  |  */
+  10 | async function captureSearchApiResponse(page, triggerAction, urlPattern = /web-bff\/(search|content)/i) {
+  11 |     const [response] = await Promise.all([
+> 12 |         page.waitForResponse(
+     |              ^ TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event "response"
+  13 |             (res) => urlPattern.test(res.url()) && res.status() === 200,
+  14 |             { timeout: 15000 }
+  15 |         ),
+  16 |         triggerAction(),
+  17 |     ]);
+  18 | 
+  19 |     return response.json();
+  20 | }
+  21 | 
+  22 | /**
+  23 |  * Captura TODAS las respuestas que contengan productos durante una sesión,
+  24 |  * útil cuando no se sabe con certeza cuál de varias llamadas es la definitiva
+  25 |  * (por ejemplo, si la búsqueda dispara typeahead + listado en paralelo).
+  26 |  */
+  27 | function attachProductResponseCollector(page, urlPattern = /web-bff\/(search|content)/i) {
+  28 |     const captured = [];
+  29 | 
+  30 |     page.on('response', async (response) => {
+  31 |         if (!urlPattern.test(response.url())) return;
+  32 | 
+  33 |         const contentType = response.headers()['content-type'] || '';
+  34 |         if (!contentType.includes('application/json')) return;
+  35 | 
+  36 |         try {
+  37 |             const data = await response.json();
+  38 |             const json = JSON.stringify(data);
+  39 |             if (json.includes('recordTitle') && json.includes('products')) {
+  40 |                 captured.push({ url: response.url(), data });
+  41 |             }
+  42 |         } catch {
+  43 |             // respuesta no parseable, se ignora
+  44 |         }
+  45 |     });
+  46 | 
+  47 |     return captured;
+  48 | }
+  49 | 
+  50 | module.exports = { captureSearchApiResponse, attachProductResponseCollector };
+  51 | 
+```
