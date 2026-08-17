@@ -27,7 +27,7 @@ export class ColorFilter {
     const countBefore = await this.productCards.count();
     await colorButton.click();
 
-    await this.page.waitForLoadState('networkidle').catch(() => {});
+    //await this.page.waitForLoadState('networkidle').catch(() => {});
     await this.page.waitForFunction(
       (prev) => document.querySelectorAll('a[href*="/tienda/pdp/"]').length !== prev,
       countBefore,
